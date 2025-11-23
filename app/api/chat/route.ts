@@ -3,8 +3,6 @@ import { retrieveSubjectContext } from "../../../lib/pdfIndex";
 
 export const runtime = "nodejs"; // use node for streaming stability
 
-const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-
 type ChatMessage = {
   role: "user" | "assistant" | "system";
   content: string;
@@ -14,6 +12,8 @@ export async function POST(req: Request) {
   if (!process.env.OPENAI_API_KEY) {
     return new Response("Missing OPENAI_API_KEY", { status: 500 });
   }
+
+  const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
   try {
     const body = await req.json();

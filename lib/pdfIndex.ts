@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import OpenAI from 'openai';
+import { EMBEDDING_MODEL, TOP_K_DEFAULT } from './config';
 
 export interface IndexedChunk { id: string; file: string; text: string; embedding: number[]; }
 interface IndexFile { createdAt: string; chunks: IndexedChunk[]; }
@@ -27,14 +28,25 @@ function cosine(a: number[], b: number[]): number {
   return dot / (Math.sqrt(normA) * Math.sqrt(normB));
 }
 
-export async function retrieveSubjectContext(query: string, topK = 3): Promise<string[]> {
+export async function retrieveSubjectContext(query: string, topK = TOP_K_DEFAULT): Promise<string[]> {
   const idx = loadIndex();
   if (!idx) return [];
-  if (!process.env.OPENAI_API_KEY) return [];
+  if (!process.env.OPENAI_API_KEY) {
+    console.warn('[pdfIndex] OPENAI_API_KEY missing; cannot compute query embedding.');
+    return [];
+  }
   const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-  const embResp = await client.embeddings.create({ model: 'text-embedding-3-small', input: [query] });
+  const embResp = await client.embeddings.create({ model: EMBEDDING_MODEL, input: [query] });
   const queryEmbedding = embResp.data[0].embedding;
   const scored = idx.chunks.map(c => ({ c, score: cosine(queryEmbedding, c.embedding) }));
   scored.sort((a, b) => b.score - a.score);
-  return scored.slice(0, topK).map(s => s.c.text.trim());
+  const top = scored.slice(0, topK);
+  // Diagnostic logging to help tune retrieval
+  try {
+    console.log('[pdfIndex] query:', query.length > 200 ? query.slice(0, 200) + '...' : query);
+    console.log('[pdfIndex] top-k:', top.map(s => ({ id: s.c.id, file: s.c.file, score: s.score })));
+  } catch (e) {
+    // ignore logging errors
+  }
+  return top.map(s => s.c.text.trim());
 }

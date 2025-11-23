@@ -139,7 +139,145 @@ temperature: 0.7,
 ### 7. Troubleshooting
 
 - 500 Missing OPENAI_API_KEY: set env var and restart.
-- Slow/no stream: verify network & model availability.
-- Tailwind class warning: updated to new v4 naming (`bg-linear-to-br`).
+# Chatbot2 — Next.js + OpenAI PDF-backed assistant
 
-Enjoy building with your new chatbot! 🚀
+This repository is a Next.js app that provides a streaming chat UI backed by OpenAI. The assistant can use pre-indexed PDF course materials (embeddings) to answer or recommend thesis topics without hallucinating.
+
+This README documents the current project layout, how to run it locally, how to index PDFs, and how to tune retrieval.
+
+## Quick start
+
+1. Install dependencies (use your preferred package manager):
+
+```powershell
+npm install
+# or: pnpm install
+```
+
+2. Create `.env.local` with your OpenAI key and optional overrides (see config section below):
+
+```text
+OPENAI_API_KEY=sk-...
+# Optional tuning overrides (examples):
+# EMBEDDING_MODEL=text-embedding-3-large
+# CHAT_MODEL=gpt-4o-mini
+# CHUNK_SIZE=1400
+# CHUNK_OVERLAP=150
+# MIN_CHUNK_LENGTH=60
+# TOP_K=3
+```
+
+3. Run the dev server:
+
+```powershell
+npm run dev
+```
+
+Open http://localhost:3000 — the root page is the chat UI.
+
+## Project files of interest
+
+- `app/page.tsx` — frontend UI and streaming client logic.
+- `app/api/chat/route.ts` — server-side streaming API route that builds the system prompt and calls OpenAI.
+- `lib/config.ts` — canonical configuration (chunking, embedding model, prompt template). Edit env vars or this file for defaults.
+- `lib/pdfIndex.ts` — loads `data/subject_chunks.json`, computes query embeddings, and returns top-K chunks.
+- `scripts/index-pdfs.ts` — PDF indexer: extracts text, cleans & chunks it, creates embeddings, and writes `data/subject_chunks.json`.
+- `data/pdfs/` — drop your PDF files here for indexing (server-side only).
+- `data/subject_chunks.json` — generated index (chunk text + embeddings).
+
+## Indexing PDFs (create/update embeddings)
+
+Place PDFs into `data/pdfs/` and run the indexer. The indexer cleans text, prefers sentence boundaries, merges tiny fragments, and batches embedding requests.
+
+Recommended command (use more heap for large PDFs):
+
+```powershell
+# from repo root
+node --max-old-space-size=4096 -r ts-node/register "scripts/index-pdfs.ts"
+```
+
+After success you should see `Uložené embeddings -> data/subject_chunks.json` and per-file chunk counts.
+
+Re-run the indexer whenever you add/remove PDFs or change `EMBEDDING_MODEL`.
+
+## Configuration and tuning
+
+All runtime defaults live in `lib/config.ts` and are overridable via `.env.local`.
+
+- Embeddings: `EMBEDDING_MODEL` (defaults to `text-embedding-3-small`; use `text-embedding-3-large` for higher accuracy — re-index required).
+- Chat model: `CHAT_MODEL` (defaults in `lib/config.ts` — change if you need different latency/capability).
+- Chunking: `CHUNK_SIZE`, `CHUNK_OVERLAP`, `MIN_CHUNK_LENGTH` — tune these to control chunk granularity. Defaults tuned for PDFs but adjust to your documents.
+- Retrieval: `TOP_K` controls how many chunks are appended to the system prompt.
+- Prompt template: `PROMPT_TEMPLATE` in `lib/config.ts` contains the system prompt used for thesis recommendations; you can override with an env var but editing the file is easier for big template changes.
+
+Example `.env.local` snippet:
+
+```text
+OPENAI_API_KEY=sk-...
+EMBEDDING_MODEL=text-embedding-3-large
+CHAT_MODEL=gpt-4o-mini
+CHUNK_SIZE=1800
+CHUNK_OVERLAP=200
+MIN_CHUNK_LENGTH=120
+TOP_K=3
+CHAT_TEMPERATURE=0.0
+```
+
+Notes:
+- Changing `EMBEDDING_MODEL` requires re-running the indexer.
+- Lower `CHAT_TEMPERATURE` (0.0–0.3) reduces hallucination.
+
+## Diagnosing and improving chunking/retrieval
+
+Tools and tips included in the repo:
+
+- `scripts/analyze-chunks.ts` — prints chunk length stats and samples to help spot TOC or header-heavy chunks. Run with:
+```powershell
+npx ts-node "scripts/analyze-chunks.ts"
+```
+- `lib/pdfIndex.ts` now logs top-K retrieved chunk ids and scores for each query — watch Next server logs when you submit queries.
+
+Common fixes:
+- If many tiny or TOC-like chunks exist: increase `CHUNK_SIZE`, increase `MIN_CHUNK_LENGTH`, or enable additional cleaning in `scripts/index-pdfs.ts` (the script already strips simple TOC/footer patterns).
+- If retrieval misses facts: try `text-embedding-3-large` (re-index) and/or increase `TOP_K`.
+
+Quantitative approach:
+- Create a small QA set and test recall@K (not included by default). Use `scripts/analyze-chunks.ts` and a simple QA script to compare settings and embedding models.
+
+## Running locally (common commands)
+
+```powershell
+# Install
+npm install
+
+# Index PDFs (rebuild embeddings)
+node --max-old-space-size=4096 -r ts-node/register "scripts/index-pdfs.ts"
+
+# Analyze chunks
+npx ts-node "scripts/analyze-chunks.ts"
+
+# Run dev server
+npm run dev
+```
+
+## Troubleshooting
+
+- `Missing OPENAI_API_KEY` or 500 errors: ensure `OPENAI_API_KEY` is set in `.env.local` and restart the dev server.
+- `Cannot find module 'dotenv/config'`: install `dotenv` with `npm install dotenv` (the indexer now imports `dotenv/config` itself).
+- Indexer OOM: increase `--max-old-space-size` or split large PDFs.
+- If the assistant replies "Nemám dostatočné informácie...": retrieval returned no supporting chunks — inspect logs and analyzer output, then re-index or increase `TOP_K`.
+
+## Production notes
+
+- Pre-generate `data/subject_chunks.json` during your build pipeline, or store embeddings in a managed vector DB for scale.
+- Keep `OPENAI_API_KEY` in your hosting provider's secrets (do NOT commit `.env.local`).
+
+## Where to look next
+
+- To change assistant behavior: edit `lib/config.ts` → `PROMPT_TEMPLATE`.
+- To tweak chunking: edit `lib/config.ts` or `.env.local` and re-run the indexer.
+- To inspect retrieval: check Next server logs (look for `[pdfIndex] top-k:` messages).
+
+---
+
+If you want, I can add a short `scripts/qa-eval.ts` to measure recall@K across settings — say the word and I'll scaffold it.

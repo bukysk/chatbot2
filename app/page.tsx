@@ -4,6 +4,8 @@ import { useState, useRef, useEffect } from "react";
 
 type Msg = { role: "user" | "assistant"; content: string };
 
+import { PROMPT_TEMPLATE } from '../lib/config';
+
 const AREAS_EXPERIENCED_OPTIONS = [
   "Programovanie (Python, C, C++)",
   "Algoritmy a dátové štruktúry",
@@ -93,36 +95,18 @@ export default function ChatPage() {
   }
 
   function buildSystemPrompt(): string {
-    return `Si poradca pre záverečné práce Fakulty Hospodárskej informatiky (EU v Bratislave). Na základe PROFILU študenta odporuč 3-5 konkrétnych tém (bakalárska alebo inžinierska), každú s krátkym vysvetlením prečo sedí, návrhom možných metód / dátových zdrojov, a rizikami. Píš po slovensky.
+    // Build a compact PROFILE block and inject into the centralized PROMPT_TEMPLATE.
+    const profile = `Meno (len interné, nepoužívaj v odpovedi): ${formData.name}\nDoterajšia škola/odbor: ${formData.previousSchoolProgram}\nNajviac zažité oblasti: ${formData.areasExperienced.join(", ")}\nSilné stránky: ${formData.strengths}\nSlabšie / vyhnúť sa: ${formData.weaknesses}\nZáujmové oblasti: ${formData.interestAreas.join(", ")}\nPreferovaný typ témy: ${formData.topicType}\nPrepojenie s praxou / firmou: ${formData.practiceConnection}\nPreferovaný školiteľ / katedra (ak uviedol): ${formData.preferredSupervisor || "neuvedené"}\nIdeálna téma (vetou): ${formData.idealTopic}`;
 
-PROFIL:
-Meno (len interné, nepoužívaj v odpovedi): ${formData.name}
-Doterajšia škola/odbor: ${formData.previousSchoolProgram}
-Najviac zažité oblasti: ${formData.areasExperienced.join(", ")}
-Silné stránky: ${formData.strengths}
-Slabšie / vyhnúť sa: ${formData.weaknesses}
-Záujmové oblasti: ${formData.interestAreas.join(", ")}
-Preferovaný typ témy: ${formData.topicType}
-Prepojenie s praxou / firmou: ${formData.practiceConnection}
-Preferovaný školiteľ / katedra (ak uviedol): ${formData.preferredSupervisor || "neuvedené"}
-Ideálna téma (vetou): ${formData.idealTopic}
-
-POŽIADAVKY:
-- Neopakuj profil, priamo začni odporúčaniami.
-- Ak sú uvedené obmedzenia, zohľadni ich.
-- Zahrň rozmanitosť (technická, analytická, manažérska) ak je typ "unsure".
-- Uveď formát:
-1) NÁZOV TÉMY
-Stručný popis.
-Metódy / dáta: ...
-Prečo sedí: ...
-Riziká: ...
-`;
+    return PROMPT_TEMPLATE.replace('{{PROFILE}}', profile);
   }
 
   async function streamCompletion(customMessages: Msg[], sysPrompt: string) {
     setLoading(true);
     try {
+      // Debug: log the exact payload sent to the API to help diagnose missing profile data
+      // (This will appear in the browser console.)
+      console.log('POST /api/chat payload:', { messages: customMessages, systemPrompt: sysPrompt });
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -172,10 +156,13 @@ Riziká: ...
   async function sendChatMessage() {
     if (!input.trim() || loading) return;
     const userMessage: Msg = { role: "user", content: input.trim() };
+    // Build the messages payload from the current snapshot so we don't rely on async state updates
+    const toSend = [...messages, userMessage];
+    // Update UI immediately: append the user message and a placeholder assistant message
     setMessages(prev => [...prev, userMessage, { role: "assistant", content: "" }]);
     setInput("");
     const sysPrompt = buildSystemPrompt();
-    await streamCompletion([...messages, userMessage], sysPrompt);
+    await streamCompletion(toSend, sysPrompt);
   }
 
   function handleKey(e: React.KeyboardEvent) {
