@@ -237,6 +237,64 @@ npx ts-node "scripts/analyze-chunks.ts"
 ```
 - `lib/pdfIndex.ts` now logs top-K retrieved chunk ids and scores for each query — watch Next server logs when you submit queries.
 
+Auto-reload / manual reload endpoint:
+
+- The index loader now checks `data/subject_chunks.json` file modification time (mtime) on each retrieval. When the file is updated (e.g., after re-running the indexer), the running Next dev server will automatically reload the index on the next query — no full server restart required.
+- If you prefer to trigger a reload manually, there's a small debug endpoint available during development:
+
+```http
+POST http://localhost:3000/api/debug/reload-index
+GET  http://localhost:3000/api/debug/reload-index  # returns index status and chunk count
+```
+
+The POST will force reading `data/subject_chunks.json` and return JSON `{ ok: true, reloaded: true, chunks: <N> }` on success. This is intended for local development only.
+
+Live retrieval debug endpoint:
+
+You can inspect which chunks are returned for any query via the dev-only endpoint:
+
+```http
+POST http://localhost:3000/api/debug/used-chunks
+Content-Type: application/json
+
+Body: { "query": "Business Intelligence", "topK": 5 }
+
+GET http://localhost:3000/api/debug/used-chunks?q=Business%20Intelligence&top=5
+```
+
+Response example:
+
+```json
+{
+	"ok": true,
+	"query": "Business Intelligence",
+	"topK": 5,
+	"chunks": [
+		{ "id": "predmet1.pdf#2", "file": "predmet1.pdf", "score": 0.4793, "text": "...excerpt..." },
+		...
+	]
+}
+```
+
+This endpoint calls the same retrieval logic used by the chat route, so it reflects the exact chunks that would be appended to the system prompt. It's meant for development only.
+
+Session-based live retrieval debugging
+
+The chat route now records retrievals per conversation session so you can inspect which chunks were used for real user traffic. Usage:
+
+- When the client calls `POST /api/chat` it may include an optional `debugSessionId` string in the JSON body. If provided, the server will group retrievals under that id.
+- If the client does not provide `debugSessionId`, the server generates one and returns it in the response header `x-debug-session` on the streaming response. The frontend can capture that header and use it to poll the debug endpoints.
+
+Debug endpoints:
+
+```http
+GET  http://localhost:3000/api/debug/sessions          # list active debug sessions
+GET  http://localhost:3000/api/debug/session/<id>     # fetch retrieval records for session <id>
+POST http://localhost:3000/api/debug/used-chunks      # ad-hoc retrieval (as before)
+```
+
+Each session record contains timestamped retrievals with `query`, `chunks` (id/file/text/score) and a small `messages` snapshot (last user message). This is intended for local development and debugging only.
+
 Common fixes:
 - If many tiny or TOC-like chunks exist: increase `CHUNK_SIZE`, increase `MIN_CHUNK_LENGTH`, or enable additional cleaning in `scripts/index-pdfs.ts` (the script already strips simple TOC/footer patterns).
 - If retrieval misses facts: try `text-embedding-3-large` (re-index) and/or increase `TOP_K`.

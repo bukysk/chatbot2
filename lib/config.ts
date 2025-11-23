@@ -21,7 +21,7 @@ export const EMBEDDING_MODEL = process.env.EMBEDDING_MODEL || 'text-embedding-3-
 export const TOP_K_DEFAULT = intEnv('TOP_K', 3);
 
 // Export OpenAI model for chat completions (used in server code)
-export const CHAT_MODEL = process.env.CHAT_MODEL || 'gpt-4o-mini';
+export const CHAT_MODEL = process.env.CHAT_MODEL || 'gpt-4.1';
 
 // Export temperature default for completions
 export const CHAT_TEMPERATURE = Number(process.env.CHAT_TEMPERATURE ?? 0.7);

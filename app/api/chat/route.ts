@@ -1,5 +1,7 @@
 import OpenAI from "openai";
-import { retrieveSubjectContext } from "../../../lib/pdfIndex";
+import { retrieveSubjectContext, retrieveSubjectContextDetailed } from "../../../lib/pdfIndex";
+import { addRetrieval } from '../../../lib/retrievalDebugStore';
+import crypto from 'crypto';
 
 export const runtime = "nodejs"; // use node for streaming stability
 
@@ -18,6 +20,10 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
     const messages: ChatMessage[] = body.messages || [];
+    // Allow client to pass a debugSessionId to group retrievals for the conversation in the debug store.
+    // If not provided, we generate a short id and return it in a response header so the client can poll debug endpoints.
+    let debugSessionId: string | undefined = body.debugSessionId;
+    if (!debugSessionId) debugSessionId = `s-${Date.now().toString(36)}-${crypto.randomBytes(4).toString('hex')}`;
     let systemPrompt: string | undefined = body.systemPrompt;
     const includeSubjectContext: boolean = body.includeSubjectContext ?? true; // default zapnute pre prvú správu
     if (includeSubjectContext && systemPrompt) {
@@ -25,9 +31,17 @@ export async function POST(req: Request) {
       const lastUser = [...messages].reverse().find(m => m.role === "user");
       const query = lastUser?.content || systemPrompt.slice(0, 500);
       try {
-        const contextChunks = await retrieveSubjectContext(query, 3);
+        // Use the detailed retriever so we can both append texts and record ids/scores
+        const detailed = await retrieveSubjectContextDetailed(query, 3);
+        const contextChunks = detailed.map(d => d.text);
         if (contextChunks.length) {
           systemPrompt += `\n\nDoplňujúci kontext z informačných listov predmetov (použi len ak relevantné, neparafrázuj zbytočne):\n${contextChunks.map((c,i)=>`[${i+1}] ${c}`).join('\n')}`;
+        }
+        // Record retrieval in dev-only debug store (includes query, chunk ids, scores and optional message snapshot)
+        try {
+          addRetrieval(debugSessionId!, { timestamp: new Date().toISOString(), query, chunks: detailed, messages: lastUser });
+        } catch (e) {
+          console.warn('Failed to add retrieval to debug store', e);
         }
       } catch (err) {
         // Ak retrieval zlyhá, pokračujeme bez obohatenia
@@ -69,6 +83,8 @@ export async function POST(req: Request) {
       headers: {
         "Content-Type": "text/plain; charset=utf-8",
         "Cache-Control": "no-store",
+        // expose the debug session id so client dev tooling can poll /api/debug/session/:id
+        "x-debug-session": debugSessionId!,
       },
     });
   } catch (e: any) {

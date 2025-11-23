@@ -61,6 +61,10 @@ export default function ChatPage() {
   const [messages, setMessages] = useState<Msg[]>([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
+  const [debugVisible, setDebugVisible] = useState(false);
+  const [debugSessionId, setDebugSessionId] = useState<string | null>(null);
+  const [debugRecords, setDebugRecords] = useState<any[] | null>(null);
+  const debugPollRef = useRef<number | null>(null);
   const endRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -110,8 +114,13 @@ export default function ChatPage() {
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages: customMessages, systemPrompt: sysPrompt }),
+        body: JSON.stringify({ messages: customMessages, systemPrompt: sysPrompt, debugSessionId }),
       });
+      // capture server-generated debug session id (if server created one)
+      const headerSession = res.headers.get('x-debug-session');
+      if (headerSession && !debugSessionId) {
+        setDebugSessionId(headerSession);
+      }
       if (!res.body) throw new Error("Žiadne telo odpovede");
       const reader = res.body.getReader();
       const decoder = new TextDecoder();
@@ -164,6 +173,34 @@ export default function ChatPage() {
     const sysPrompt = buildSystemPrompt();
     await streamCompletion(toSend, sysPrompt);
   }
+
+  // Poll debug session retrievals when debug panel is visible and we have a session id
+  useEffect(() => {
+    if (!debugVisible) {
+      if (debugPollRef.current) {
+        clearInterval(debugPollRef.current);
+        debugPollRef.current = null;
+      }
+      return;
+    }
+    if (!debugSessionId) return;
+    // start polling every 1500ms
+    const id = window.setInterval(async () => {
+      try {
+        const res = await fetch(`/api/debug/session/${encodeURIComponent(debugSessionId)}`);
+        if (!res.ok) return;
+        const j = await res.json();
+        if (j?.records) setDebugRecords(j.records);
+      } catch (e) {
+        // ignore
+      }
+    }, 1500);
+    debugPollRef.current = id;
+    return () => {
+      if (debugPollRef.current) clearInterval(debugPollRef.current);
+      debugPollRef.current = null;
+    };
+  }, [debugVisible, debugSessionId]);
 
   function handleKey(e: React.KeyboardEvent) {
     if (e.key === "Enter" && !e.shiftKey) {
@@ -342,7 +379,7 @@ export default function ChatPage() {
               ))}
               <div ref={endRef} />
             </div>
-            <form
+              <form
               onSubmit={e => {
                 e.preventDefault();
                 sendChatMessage();
@@ -376,6 +413,95 @@ export default function ChatPage() {
           </div>
         )}
       </main>
+      {/* Debug overlay button + panel (dev only) */}
+      <div style={{ position: 'fixed', right: 16, bottom: 16, zIndex: 60 }}>
+        <div>
+          <button
+            onClick={() => setDebugVisible(v => !v)}
+            style={{ background: '#111827', color: '#fff', padding: '8px 12px', borderRadius: 8 }}
+          >
+            {debugVisible ? 'Hide Debug' : 'Show Debug'}
+          </button>
+        </div>
+        {debugVisible && (
+          <div style={{ width: 420, maxHeight: '60vh', overflow: 'auto', marginTop: 8, background: '#fff', color: '#111827', borderRadius: 8, boxShadow: '0 8px 24px rgba(0,0,0,0.15)', padding: 12 }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
+              <strong>Retrieval Debug</strong>
+              <div style={{ fontSize: 12, color: '#6b7280' }}>{debugSessionId ? `session: ${debugSessionId}` : 'no session yet'}</div>
+            </div>
+            <div style={{ marginBottom: 8 }}>
+              <div style={{ display: 'flex', gap: 8 }}>
+                <button
+                  onClick={async () => {
+                    // list sessions and auto-select the most-recent one
+                    try {
+                      const res = await fetch('/api/debug/sessions');
+                      if (!res.ok) return alert('Failed to list sessions');
+                      const j = await res.json();
+                      const sessions = j.sessions || [];
+                      if (sessions.length === 0) return alert('No active sessions');
+                      // auto-select the most recent session and fetch its records into the panel
+                      const id = sessions[0].id;
+                      setDebugSessionId(id);
+                      try {
+                        const r = await fetch(`/api/debug/session/${encodeURIComponent(id)}`);
+                        if (r.ok) {
+                          const jr = await r.json();
+                          setDebugRecords(jr.records || []);
+                        } else {
+                          alert('Failed to fetch session records');
+                        }
+                      } catch (e) {
+                        console.warn(e);
+                      }
+                      // show a concise list to the developer
+                      alert(sessions.map((s:any)=>`${s.id} (lastSeen: ${s.lastSeen}, count: ${s.count})`).join('\n'));
+                    } catch (e) { alert(String(e)); }
+                  }}
+                >List sessions</button>
+                <button
+                  onClick={async () => {
+                    try {
+                      let id = debugSessionId;
+                      if (!id) {
+                        id = window.prompt('Enter debug session id to fetch:') || undefined;
+                        if (!id) return;
+                        setDebugSessionId(id);
+                      }
+                      const res = await fetch(`/api/debug/session/${encodeURIComponent(id)}`);
+                      if (!res.ok) return alert('Session not found');
+                      const j = await res.json();
+                      // display and load into panel
+                      setDebugRecords(j.records || []);
+                      alert('Loaded session ' + id + ' (' + (j.count || 0) + ' records)');
+                    } catch (e) { alert(String(e)); }
+                  }}
+                >Fetch now</button>
+              </div>
+            </div>
+            <div style={{ fontSize: 12, color: '#374151' }}>
+              {debugRecords && debugRecords.length > 0 ? (
+                debugRecords.slice().reverse().map((r: any, idx: number) => (
+                  <div key={idx} style={{ padding: 8, borderBottom: '1px solid #eee' }}>
+                    <div style={{ fontSize: 11, color: '#6b7280' }}>{r.timestamp}</div>
+                    <div style={{ fontWeight: 600 }}>{r.query}</div>
+                    <div style={{ marginTop: 6 }}>
+                      {r.chunks.map((c: any, i: number) => (
+                        <div key={i} style={{ fontSize: 12, marginBottom: 6 }}>
+                          <div style={{ color: '#374151' }}><strong>{c.id}</strong> <span style={{ color: '#6b7280' }}>({c.file})</span> — <span style={{ color: '#065f46' }}>{(c.score||0).toFixed(4)}</span></div>
+                          <div style={{ color: '#374151' }}>{(c.text||'').replace(/\s+/g,' ').slice(0,200)}{(c.text||'').length>200 ? '...' : ''}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <div style={{ fontSize: 12, color: '#6b7280' }}>No retrievals yet for this session.</div>
+              )}
+            </div>
+          </div>
+        )}
+      </div>
       <footer className="py-4 text-center text-xs text-zinc-500 dark:text-zinc-400">
         {submitted ? "Pokračuj v konverzácii alebo upresni preferencie" : "Vyplň dotazník pre personalizované odporúčania"}
       </footer>

@@ -4,9 +4,11 @@
   Účel: Načíta všetky PDF v data/pdfs, extrahuje text, rozdelí na chunky, vytvorí embeddings a uloží do data/subject_chunks.json.
   Spustenie: pnpm ts-node scripts/index-pdfs.ts (alebo npx ts-node ...)
 */
-import 'dotenv/config';
+import dotenv from 'dotenv';
 import fs from 'fs';
 import path from 'path';
+// Prefer loading `.env.local` for local development (Next uses .env.local by convention)
+dotenv.config({ path: path.join(process.cwd(), '.env.local') });
 import pdfParse from 'pdf-parse';
 import OpenAI from 'openai';
 // Import canonical settings from the shared config so tuning happens in one place.
@@ -106,12 +108,31 @@ async function main() {
     console.log(`Súbor: ${file} -> ${chunks.length} chunkov`);
     // Batch embeddings in chunks of 100 to avoid huge single requests
     const BATCH_SIZE = 100;
+    const fileChunkRecords: ChunkRecord[] = [];
     for (let i = 0; i < chunks.length; i += BATCH_SIZE) {
       const batch = chunks.slice(i, i + BATCH_SIZE);
       const embeddingsResp = await client.embeddings.create({ model: EMBEDDING_MODEL, input: batch });
       embeddingsResp.data.forEach((emb, j) => {
-        allChunks.push({ id: `${file}#${i + j}`, file, text: batch[j], embedding: emb.embedding });
+        const rec: ChunkRecord = { id: `${file}#${i + j}`, file, text: batch[j], embedding: emb.embedding };
+        allChunks.push(rec);
+        fileChunkRecords.push(rec);
       });
+    }
+
+    // Create a subject-level chunk by averaging all chunk embeddings for this file.
+    // This yields a single vector representing the whole subject (safer than embedding the entire PDF text).
+    if (fileChunkRecords.length > 0) {
+      const dim = fileChunkRecords[0].embedding.length;
+      const sum = new Array<number>(dim).fill(0);
+      for (const c of fileChunkRecords) {
+        for (let k = 0; k < dim; k++) sum[k] += c.embedding[k];
+      }
+      const avg = sum.map(v => v / fileChunkRecords.length);
+      // Text for subject-level chunk: short descriptive header (we don't embed full text again)
+      const subjectText = `SUBJECT-LEVEL: ${file} (centroid of ${fileChunkRecords.length} chunks)`;
+      const subjectRec: ChunkRecord = { id: `${file}#subject`, file, text: subjectText, embedding: avg };
+      allChunks.push(subjectRec);
+      console.log(`Subject-level chunk created for ${file} -> id=${subjectRec.id}`);
     }
   }
   fs.writeFileSync(OUT_FILE, JSON.stringify({ createdAt: new Date().toISOString(), chunks: allChunks }, null, 2));

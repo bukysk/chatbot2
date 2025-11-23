@@ -1,0 +1,460 @@
+{
+  "s-micaly53-d38c34e5": [
+    {
+      "timestamp": "2025-11-23T22:33:48.058Z",
+      "query": "test",
+      "chunks": [
+        {
+          "id": "predmet1.pdf#4",
+          "file": "predmet1.pdf",
+          "text": "ia. Skúška pozostáva z dvoch častí: testu a konkrétnej problémovej úlohy na riešenie. Testom sa overuje dosiahnutá úroveň výsledkov vzdelávania A., C., F., G., riešením problémovej úlohy sa overuje dosiahnutá úroveň výsledkov vzdelávania B., C., D., E. Cvičenia 40% Náplňou cvičení je vypracovanie a obhájenie projektu, na ktorom študenti pracujú v skupinách, ktoré majú definovaného svojho tím lídra. Tím lídra si volia študenti spomedzi seba. Prácu v skupinách si študenti organizujú autonómne a riadi ju teamlíder. Hodnotenie výsledkov práce skupiny (predložený projekt) je hodnotený ako celok za celú skupinu, ohodnotenie príspevku individuálnych členov skupiny na hodnotení skupiny je výsledkom internej dohody skupiny. Súčasťou hodnotenia individuálneho študenta je tiež jeho aktivita na oponovaní a hodnotení projektov iných skupín. Výsledky práce (projekt) sú skupinou predložené na hodnotenie počas semestra tri krát. Hodnotením projektov a hodnotením oponovania výsledkov práce iných skupín sa hodnotia nasledovné výsledky vzdelávania: B., C., D., E., G., H., I.",
+          "score": 0.305261476262465
+        },
+        {
+          "id": "predmet2.pdf#103",
+          "file": "predmet2.pdf",
+          "text": "hou sa overuje dosiahnutá úroveň výsledkov vzdelávania D., E., F., G. Záverečná skúška - písomná forma, 60% (absolvovanie skúšky znamená získanie min. 51% z hodnotenia skúšky) Teoretickou časťou sa overuje dosiahnutá úroveň výsledkov vzdelávania A., B., C. Pracovné zaťaženie študenta: Pracovné zaťaženie študenta (v hodinách): 3kr x 26h = 78 h Účasť na seminároch 26 h, príprava na semináre 13 h, vypracovanie záverečnej úlohy 13 h, príprava na skúšku 26 h) Výsledky vzdelávania: Študenti absolvovaním predmetu nadobudnú : Znalosti A. Vedomosti z oblasti webového dizajnu a tvorby webových aplikácií pomocou HTML, XHTML a CSS, vrátane techník profesionálnej praxe s jazykmi XML, JSON, JavaScript, AJAX a dátovým formátom JSON. B. Poznatky o význame a výhodách používania XML súborov v REST rozhraniach, o efektivite JSON a vedomosti potrebné na prácu s týmito formátmi v jazyku JavaScript C. Vedomosti o jazyku TypeScript (super-set jazyka JavaScript) a jeho možnostiach. Zručnosti D. Navrhnúť vstupné a výstupné dáta webovej aplikácie v správnej štruktúre a formáte (XML, JSON). E. Spracovať vstupné dáta vo webovej aplikácii pomocou skriptov v jazyku JavaScript. F. Využiť jazyk TypeScript na automatizované testovanie internetových aplikácií. G. Vytvoriť a testovať REST služby v prostredí Node.",
+          "score": 0.2923676236261143
+        },
+        {
+          "id": "predmet2.pdf#105",
+          "file": "predmet2.pdf",
+          "text": "oritmy a dátové štruktúry 11. používanie/testovanie REST služieb - node.js / express 12. používanie/testovanie REST služieb - postgresql a mongodb 13. automatizované testovanie aplikácií js frameworkami Odporúčaná literatúra: 1. Naik, P. G., & Naik, G. R. (2024). Mastering Bootstrap, AJAX, and jQuery for elevating web experiences with advanced development techniques. Shashwat Publication. 2. Easy HTML – Handy Guide (2023): Discover the World of ... (2023). Publisher unknown. https://www.amazon.com/Easy-HTML-Discover-Programming-Foundations/dp/B0C9SBNWC2 3. Haverbeke, M. (2024). Eloquent JavaScript (4th ed.). Publisher info not fully specified. https:// eloquentjavascript.net 4. Mlýnková, I. (2008). XML technologie. Grada. 5. Kosek, J. (2000). XML pro každého. Grada. 6. W3Schools. (n.d.). XML tutorial. https://www.w3schools.com/xml/default.asp 7. W3Schools. (n.d.). JavaScript tutorial. https://www.w3schools.com/js/default.asp 8. W3Schools. (n.d.). AJAX tutorial. https://www.w3schools.com/ajax/default.asp 9. W3Schools. (n.d.). JSON tutorial. https://www.w3schools.com/json/default.asp 10. W3Schools. (n.d.). HTML & XHTML tutorial. https://www.w3schools.com/html/default.asp https://www.w3schools.com/html/html_xhtml.asp Jazyk, ktorého znalosť je potrebná na absolvovanie predmetu: slovenský Poznámky: Hodnotenie predmetov Celkový počet hodnotených študentov: 58 ABCDEFX 15.5220.6915.",
+          "score": 0.27686431508035303
+        }
+      ],
+      "messages": {
+        "role": "user",
+        "content": "test"
+      }
+    },
+    {
+      "timestamp": "2025-11-23T22:38:42.655Z",
+      "query": "Na základe môjho profilu prosím odporuč vhodné témy záverečnej práce.",
+      "chunks": [
+        {
+          "id": "predmet1.pdf#63",
+          "file": "predmet1.pdf",
+          "text": "podľa zadanej témy záverečnej práce + Študijný poriadok Ekonomickej univerzity v Bratislave; + Interná smernica Ekonomickej univerzity v Bratislave č. 8/2017 o záverečných a habilitačných prácach; Jazyk, ktorého znalosť je potrebná na absolvovanie predmetu: Slovenský jazyk, anglický jazyk Poznámky: Hodnotenie predmetov Celkový počet hodnotených študentov: 198 NZZ 1.5298.48 Vyučujúci: doc. Ing. Michal Páleš, PhD. Dátum schválenia: 04.03.2025 Dátum poslednej zmeny: 15.05.2022 Schválil: osoba zodpovedná za realizáciu študijného programu doc. Ing. Andrea Furková, PhD., osoba zodpovedná za realizáciu študijného programu doc. Dr. Ing. Miroslav Hudec, osoba zodpovedná za realizáciu študijného programu prof. Ing. Ivan Brezina, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Martin Mišút, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Jaroslav Kultan, PhD.\n\nINFORMAČNÝ LIST PREDMETU Vysoká škola: Ekonomická univerzita v Bratislave Fakulta: Fakulta hospodárskej informatiky Kód predmetu: KAI FHI/ IIA21910/22 Názov predmetu: Seminár k záverečnej práci II Druh, rozsah a metóda vzdelávacích činností: Forma výučby: Prednáška / Cvičenie Odporúčaný rozsah výučby ( v hodinách ): Týždenný: 0 / 2 Za obdobie štúdia: 0 / 26 Metóda štúdia: prezenčná Počet kreditov: 2 Odporúčaný semester/trimester štúdia: 4. Stupeň štúdia: II.",
+          "score": 0.5343600537727081
+        },
+        {
+          "id": "predmet1.pdf#62",
+          "file": "predmet1.pdf",
+          "text": "dajov a metódy spracovania, zvoliť metódy validácie výsledkov D. akcentovať etické zásady a pravidlá akademického písania. Stručná osnova predmetu: 1. Diskusia k východiskovým predpokladom z hľadiska analýzy obsahového zamerania práce a predpokladaných výstupov 2. Diskusia k využívaniu databáz Web of Science / Scopus, platformy ReserchaGate a domácej literatúry; 3. Seminár k právnym aspektom akademického písania; 4. Seminár k etickým aspektom akademického písania; 5. Prezentácia prehľadu relevantných domácich zdrojov k téme záverečnej práce; 6. Prezentácia prehľadu relevantných zahraničných zdrojov k téme záverečnej práce;\n\n7. Diskusia k identifikovaným oblastiam, v ktorých môže záverečná práca viesť k novým poznatkom; 8. Stanovenie cieľov záverečnej práce; 9. Diskusia k výberu metód navrhovaných na dosiahnutie cieľov práce; 10. Diskusia k voľbe spôsobov validácie zistení a výsledkov; 11. Prezentácia prehľadovej časti (prvá kapitola) záverečnej práce; 12. Prezentácia návrhu metodickej časti (druhá kapitola) práce; 13. Vyhodnocovanie priebežného spracovania Odporúčaná literatúra: podľa zadanej témy záverečnej práce + Študijný poriadok Ekonomickej univerzity v Bratislave; + Interná smernica Ekonomickej univerzity v Bratislave č.",
+          "score": 0.5291393761139722
+        },
+        {
+          "id": "predmet1.pdf#subject",
+          "file": "predmet1.pdf",
+          "text": "SUBJECT-LEVEL: predmet1.pdf (centroid of 115 chunks)",
+          "score": 0.5138329531853284
+        }
+      ],
+      "messages": {
+        "role": "user",
+        "content": "Na základe môjho profilu prosím odporuč vhodné témy záverečnej práce."
+      }
+    }
+  ],
+  "s-micb7yi9-6347a369": [
+    {
+      "timestamp": "2025-11-23T22:48:54.970Z",
+      "query": "Na základe môjho profilu prosím odporuč vhodné témy záverečnej práce.",
+      "chunks": [
+        {
+          "id": "predmet1.pdf#63",
+          "file": "predmet1.pdf",
+          "text": "podľa zadanej témy záverečnej práce + Študijný poriadok Ekonomickej univerzity v Bratislave; + Interná smernica Ekonomickej univerzity v Bratislave č. 8/2017 o záverečných a habilitačných prácach; Jazyk, ktorého znalosť je potrebná na absolvovanie predmetu: Slovenský jazyk, anglický jazyk Poznámky: Hodnotenie predmetov Celkový počet hodnotených študentov: 198 NZZ 1.5298.48 Vyučujúci: doc. Ing. Michal Páleš, PhD. Dátum schválenia: 04.03.2025 Dátum poslednej zmeny: 15.05.2022 Schválil: osoba zodpovedná za realizáciu študijného programu doc. Ing. Andrea Furková, PhD., osoba zodpovedná za realizáciu študijného programu doc. Dr. Ing. Miroslav Hudec, osoba zodpovedná za realizáciu študijného programu prof. Ing. Ivan Brezina, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Martin Mišút, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Jaroslav Kultan, PhD.\n\nINFORMAČNÝ LIST PREDMETU Vysoká škola: Ekonomická univerzita v Bratislave Fakulta: Fakulta hospodárskej informatiky Kód predmetu: KAI FHI/ IIA21910/22 Názov predmetu: Seminár k záverečnej práci II Druh, rozsah a metóda vzdelávacích činností: Forma výučby: Prednáška / Cvičenie Odporúčaný rozsah výučby ( v hodinách ): Týždenný: 0 / 2 Za obdobie štúdia: 0 / 26 Metóda štúdia: prezenčná Počet kreditov: 2 Odporúčaný semester/trimester štúdia: 4. Stupeň štúdia: II.",
+          "score": 0.5343600537727081
+        },
+        {
+          "id": "predmet1.pdf#62",
+          "file": "predmet1.pdf",
+          "text": "dajov a metódy spracovania, zvoliť metódy validácie výsledkov D. akcentovať etické zásady a pravidlá akademického písania. Stručná osnova predmetu: 1. Diskusia k východiskovým predpokladom z hľadiska analýzy obsahového zamerania práce a predpokladaných výstupov 2. Diskusia k využívaniu databáz Web of Science / Scopus, platformy ReserchaGate a domácej literatúry; 3. Seminár k právnym aspektom akademického písania; 4. Seminár k etickým aspektom akademického písania; 5. Prezentácia prehľadu relevantných domácich zdrojov k téme záverečnej práce; 6. Prezentácia prehľadu relevantných zahraničných zdrojov k téme záverečnej práce;\n\n7. Diskusia k identifikovaným oblastiam, v ktorých môže záverečná práca viesť k novým poznatkom; 8. Stanovenie cieľov záverečnej práce; 9. Diskusia k výberu metód navrhovaných na dosiahnutie cieľov práce; 10. Diskusia k voľbe spôsobov validácie zistení a výsledkov; 11. Prezentácia prehľadovej časti (prvá kapitola) záverečnej práce; 12. Prezentácia návrhu metodickej časti (druhá kapitola) práce; 13. Vyhodnocovanie priebežného spracovania Odporúčaná literatúra: podľa zadanej témy záverečnej práce + Študijný poriadok Ekonomickej univerzity v Bratislave; + Interná smernica Ekonomickej univerzity v Bratislave č.",
+          "score": 0.5291393761139722
+        },
+        {
+          "id": "predmet1.pdf#subject",
+          "file": "predmet1.pdf",
+          "text": "SUBJECT-LEVEL: predmet1.pdf (centroid of 115 chunks)",
+          "score": 0.5138329531853284
+        }
+      ],
+      "messages": {
+        "role": "user",
+        "content": "Na základe môjho profilu prosím odporuč vhodné témy záverečnej práce."
+      }
+    },
+    {
+      "timestamp": "2025-11-23T22:49:35.339Z",
+      "query": "kto učí predmet distribuovane technologie?",
+      "chunks": [
+        {
+          "id": "predmet1.pdf#17",
+          "file": "predmet1.pdf",
+          "text": "dná za realizáciu študijného programu doc. Ing. Martin Mišút, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Jaroslav Kultan, PhD.\n\nINFORMAČNÝ LIST PREDMETU Vysoká škola: Ekonomická univerzita v Bratislave Fakulta: Fakulta hospodárskej informatiky Kód predmetu: KAI FHI/ IIA21540/21 Názov predmetu: Distribuované technológie I Druh, rozsah a metóda vzdelávacích činností: Forma výučby: Prednáška / Cvičenie Odporúčaný rozsah výučby ( v hodinách ): Týždenný: 2 / 2 Za obdobie štúdia: 26 / 26 Metóda štúdia: prezenčná Počet kreditov: 5 Odporúčaný semester/trimester štúdia: 1. Stupeň štúdia: II., P Podmieňujúce predmety: Podmienky na absolvovanie predmetu: Skúška 60% hodnotenia. Skúška pozostáva z dvoch častí: testu a zostavenia modelu pre konkrétne prostredie. Cvičenia 40% (vypracovanie a obhájenie projektu) Testom sa overuje dosiahnutá úroveň výsledkov vzdelávania A., B., C., D., tvorbou modelu pre popísané prostredie sa overuje dosiahnutá úroveň výsledkov vzdelávania E. Pracovné zaťaženie študenta: Celková záťaž štúdia (v hodinách): 5 kreditov x 26 hodín = 130 hodín Rozdelenie študijného zaťaženia: Účasť na prednáškach a seminároch: 52 hodín Príprava na semináre: 13 hodín Písomné úlohy: 30 hodín Príprava na záverečnú skúšku: 35 hodín Výsledky vzdelávania: Po absolvovaní predmetu majú byť študenti schopní: A. posúdiť vhodnosť budovania centralizovaných, resp.",
+          "score": 0.6671295830466254
+        },
+        {
+          "id": "predmet1.pdf#20",
+          "file": "predmet1.pdf",
+          "text": "dná za realizáciu študijného programu doc. Ing. Martin Mišút, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Jaroslav Kultan, PhD.\n\nINFORMAČNÝ LIST PREDMETU Vysoká škola: Ekonomická univerzita v Bratislave Fakulta: Fakulta hospodárskej informatiky Kód predmetu: KAI FHI/ IIA21550/25 Názov predmetu: Distribuované technológie II Druh, rozsah a metóda vzdelávacích činností: Forma výučby: Prednáška / Cvičenie Odporúčaný rozsah výučby ( v hodinách ): Týždenný: 2 / 2 Za obdobie štúdia: 26 / 26 Metóda štúdia: prezenčná Počet kreditov: 6 Odporúčaný semester/trimester štúdia: 2. Stupeň štúdia: II., P Podmieňujúce predmety: Podmienky na absolvovanie predmetu: Cvičenia 40% Náplňou cvičení je vypracovanie a obhájenie projektov, na ktorom študenti pracujú na cvičeniach počas semestra. Každý odovzdaný projekt sa hodnotí samostatne a študent musí dosiahnuť aspoň 51% úspešnosť po zosumarizovaní výsledkov. Overuje sadosiahnutá úroveň výsledkov vzdelávania D., E. Skúška 60% hodnotenia. Skúška pozostáva z dvoch častí: testu a konkrétnej problémovej úlohy na riešenie. Testom sa overuje dosiahnutá úroveň výsledkov vzdelávania A.,B., C.",
+          "score": 0.6594012135514881
+        },
+        {
+          "id": "predmet1.pdf#18",
+          "file": "predmet1.pdf",
+          "text": "erečnú skúšku: 35 hodín Výsledky vzdelávania: Po absolvovaní predmetu majú byť študenti schopní: A. posúdiť vhodnosť budovania centralizovaných, resp. distribuovaných informačných systémov pre danú aplikačnú oblasť, B. porozumieť podstate technických, programových, technologických a ekonomických predpokladov realizácie DSD, C. posúdiť potrebu budovania vlastného IS, jeho outsourcingu, resp. Cloud Computingu, D. analyzovať potrebu fragmentácie a alokácie dát, E. minimalizovať nároky na prenos a spracovanie dát v distribuovaných DDBS navrhnúť riešenie DIS či vybraných komponentov DIS pre určitú aplikačnú doménu. Stručná osnova predmetu: 1. Distribuované spracovanie dát - úvod 2. Komunikačný podsystém 3. Architektúra klient/server 4. Referenčný model DSD 5. Distribuovaná transakcia 6. Distribuované operačné systémy\n\n7. Distribuované výpočtové prostredie 8. Distribuované počítačové systémy 9. Mobilné DSD 10. Cloud Computing 11. Distribuovaný aplikačný podsystém 12. Servisne orientované architektúry 13. Manažment DIS Odporúčaná literatúra: Závodný, P.: Počítačové siete v hospodárskej praxi, Ekonóm, Bratislava 2005. ZÁVODNÝ, Peter - TURŇA, Ľubomír - RUBLÍK, Martin. Počítačové siete v hospodárskej praxi. 2. dopln. vyd. Bratislava : Vydavateľstvo EKONÓM, 2009. 356 s. ISBN 978-80-225-2731-6. Tanenbaum, A.S.: Computer networks, Prentice Hall, 1989. Sportack, M., A.",
+          "score": 0.6031179313139509
+        }
+      ],
+      "messages": {
+        "role": "user",
+        "content": "kto učí predmet distribuovane technologie?"
+      }
+    }
+  ],
+  "s-micbc2z0-840ed14b": [
+    {
+      "timestamp": "2025-11-23T22:52:06.710Z",
+      "query": "Na základe môjho profilu prosím odporuč vhodné témy záverečnej práce.",
+      "chunks": [
+        {
+          "id": "predmet1.pdf#63",
+          "file": "predmet1.pdf",
+          "text": "podľa zadanej témy záverečnej práce + Študijný poriadok Ekonomickej univerzity v Bratislave; + Interná smernica Ekonomickej univerzity v Bratislave č. 8/2017 o záverečných a habilitačných prácach; Jazyk, ktorého znalosť je potrebná na absolvovanie predmetu: Slovenský jazyk, anglický jazyk Poznámky: Hodnotenie predmetov Celkový počet hodnotených študentov: 198 NZZ 1.5298.48 Vyučujúci: doc. Ing. Michal Páleš, PhD. Dátum schválenia: 04.03.2025 Dátum poslednej zmeny: 15.05.2022 Schválil: osoba zodpovedná za realizáciu študijného programu doc. Ing. Andrea Furková, PhD., osoba zodpovedná za realizáciu študijného programu doc. Dr. Ing. Miroslav Hudec, osoba zodpovedná za realizáciu študijného programu prof. Ing. Ivan Brezina, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Martin Mišút, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Jaroslav Kultan, PhD.\n\nINFORMAČNÝ LIST PREDMETU Vysoká škola: Ekonomická univerzita v Bratislave Fakulta: Fakulta hospodárskej informatiky Kód predmetu: KAI FHI/ IIA21910/22 Názov predmetu: Seminár k záverečnej práci II Druh, rozsah a metóda vzdelávacích činností: Forma výučby: Prednáška / Cvičenie Odporúčaný rozsah výučby ( v hodinách ): Týždenný: 0 / 2 Za obdobie štúdia: 0 / 26 Metóda štúdia: prezenčná Počet kreditov: 2 Odporúčaný semester/trimester štúdia: 4. Stupeň štúdia: II.",
+          "score": 0.5343600537727081
+        },
+        {
+          "id": "predmet1.pdf#62",
+          "file": "predmet1.pdf",
+          "text": "dajov a metódy spracovania, zvoliť metódy validácie výsledkov D. akcentovať etické zásady a pravidlá akademického písania. Stručná osnova predmetu: 1. Diskusia k východiskovým predpokladom z hľadiska analýzy obsahového zamerania práce a predpokladaných výstupov 2. Diskusia k využívaniu databáz Web of Science / Scopus, platformy ReserchaGate a domácej literatúry; 3. Seminár k právnym aspektom akademického písania; 4. Seminár k etickým aspektom akademického písania; 5. Prezentácia prehľadu relevantných domácich zdrojov k téme záverečnej práce; 6. Prezentácia prehľadu relevantných zahraničných zdrojov k téme záverečnej práce;\n\n7. Diskusia k identifikovaným oblastiam, v ktorých môže záverečná práca viesť k novým poznatkom; 8. Stanovenie cieľov záverečnej práce; 9. Diskusia k výberu metód navrhovaných na dosiahnutie cieľov práce; 10. Diskusia k voľbe spôsobov validácie zistení a výsledkov; 11. Prezentácia prehľadovej časti (prvá kapitola) záverečnej práce; 12. Prezentácia návrhu metodickej časti (druhá kapitola) práce; 13. Vyhodnocovanie priebežného spracovania Odporúčaná literatúra: podľa zadanej témy záverečnej práce + Študijný poriadok Ekonomickej univerzity v Bratislave; + Interná smernica Ekonomickej univerzity v Bratislave č.",
+          "score": 0.5291393761139722
+        },
+        {
+          "id": "predmet1.pdf#subject",
+          "file": "predmet1.pdf",
+          "text": "SUBJECT-LEVEL: predmet1.pdf (centroid of 115 chunks)",
+          "score": 0.5138329531853284
+        }
+      ],
+      "messages": {
+        "role": "user",
+        "content": "Na základe môjho profilu prosím odporuč vhodné témy záverečnej práce."
+      }
+    },
+    {
+      "timestamp": "2025-11-23T22:52:31.655Z",
+      "query": "kto učí viackriterialne rozhodovanie?",
+      "chunks": [
+        {
+          "id": "predmet1.pdf#84",
+          "file": "predmet1.pdf",
+          "text": "in Mathematical Programming. London: John Wiley and Sons. 3. LAŠČIAK, A. a kol. 1990. Optimálne programovanie. 2. upravené vydanie. Bratislava: Alfa. Jazyk, ktorého znalosť je potrebná na absolvovanie predmetu: slovenský Poznámky: Hodnotenie predmetov Celkový počet hodnotených študentov: 744 ABCDEFX 11.1613.5816.825.024.878.6 Vyučujúci: doc. Ing. Michaela Chocholatá, PhD., Ing. Pavel Gežík, PhD. Dátum schválenia: 04.03.2025 Dátum poslednej zmeny: 17.05.2022 Schválil: osoba zodpovedná za realizáciu študijného programu doc. Ing. Andrea Furková, PhD., osoba zodpovedná za realizáciu študijného programu doc. Dr. Ing. Miroslav Hudec, osoba zodpovedná za realizáciu študijného programu prof. Ing. Ivan Brezina, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Martin Mišút, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Jaroslav Kultan, PhD.\n\nINFORMAČNÝ LIST PREDMETU Vysoká škola: Ekonomická univerzita v Bratislave Fakulta: Fakulta hospodárskej informatiky Kód predmetu: KOVE FHI/ IIB21520/22 Názov predmetu: Viackriteriálne rozhodovanie Druh, rozsah a metóda vzdelávacích činností: Forma výučby: Prednáška / Cvičenie Odporúčaný rozsah výučby ( v hodinách ): Týždenný: 2 / 2 Za obdobie štúdia: 26 / 26 Metóda štúdia: prezenčná Počet kreditov: 5 Odporúčaný semester/trimester štúdia: 2. Stupeň štúdia: II.",
+          "score": 0.672509016862046
+        },
+        {
+          "id": "predmet1.pdf#87",
+          "file": "predmet1.pdf",
+          "text": "eriálneho rozhodovania. Bratislava : Vydavateľstvo EKONÓM, 2014. 3. Vincent Barichard, Matthias Ehrgott, Xavier Gandibleux, and Vincent T'Kindt. 2009. Multiobjective Programming and Goal Programming: Theoretical Results and Practical Applications (1st. ed.). Springer Publishing Company, Incorporated. 4. Constantin Zopounidis, Michael Doumpos: Multiple Criteria Decision Making: Applications in Management and Engineering 1st ed. 2017 Edition Jazyk, ktorého znalosť je potrebná na absolvovanie predmetu: slovenský, anglický Poznámky: Hodnotenie predmetov Celkový počet hodnotených študentov: 710 ABCDEFX 17.1818.1720.2816.4822.825.07 Vyučujúci: doc. Ing. Andrea Furková, PhD., Ing. Daniel Dudek, Peter Knížat, PhD., MSc. Dátum schválenia: 04.03.2025 Dátum poslednej zmeny: 06.12.2022 Schválil: osoba zodpovedná za realizáciu študijného programu doc. Ing. Andrea Furková, PhD., osoba zodpovedná za realizáciu študijného programu doc. Dr. Ing. Miroslav Hudec, osoba zodpovedná za realizáciu študijného programu prof. Ing. Ivan Brezina, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Martin Mišút, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Jaroslav Kultan, PhD.",
+          "score": 0.6563604512502639
+        },
+        {
+          "id": "predmet2.pdf#152",
+          "file": "predmet2.pdf",
+          "text": "e z viackriteriálneho rozhodovania. Bratislava : Vydavateľstvo EKONÓM, 2014. 3. Zavadskas, Edmundas - Antucheviciene, Jurgita - Chatterjee, Prasenjit. Multiple-Criteria Decision-Making (MCDM) Techniques for Business Processes Information Management. Mdpi AG, 2019. Jazyk, ktorého znalosť je potrebná na absolvovanie predmetu: slovenský, anglický Poznámky: Hodnotenie predmetov Celkový počet hodnotených študentov: 595 ABCDEFX 26.2224.7116.978.422.691.01 Vyučujúci: Peter Knížat, PhD., MSc., Ing. Daniel Dudek, Ing. Michal Bogár Dátum schválenia: 04.03.2025 Dátum poslednej zmeny: 06.11.2025 Schválil: osoba zodpovedná za realizáciu študijného programu doc. Ing. Andrea Furková, PhD., osoba zodpovedná za realizáciu študijného programu doc. Dr. Ing. Miroslav Hudec, osoba zodpovedná za realizáciu študijného programu doc. Ing. Martin Mišút, CSc., osoba zodpovedná za realizáciu študijného programu prof. Ing. Ivan Brezina, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Jaroslav Kultan, PhD.",
+          "score": 0.6518492805755547
+        }
+      ],
+      "messages": {
+        "role": "user",
+        "content": "kto učí viackriterialne rozhodovanie?"
+      }
+    },
+    {
+      "timestamp": "2025-11-23T22:55:03.222Z",
+      "query": "kto učí viackriterialne rozhodovanie?",
+      "chunks": [
+        {
+          "id": "predmet1.pdf#84",
+          "file": "predmet1.pdf",
+          "text": "in Mathematical Programming. London: John Wiley and Sons. 3. LAŠČIAK, A. a kol. 1990. Optimálne programovanie. 2. upravené vydanie. Bratislava: Alfa. Jazyk, ktorého znalosť je potrebná na absolvovanie predmetu: slovenský Poznámky: Hodnotenie predmetov Celkový počet hodnotených študentov: 744 ABCDEFX 11.1613.5816.825.024.878.6 Vyučujúci: doc. Ing. Michaela Chocholatá, PhD., Ing. Pavel Gežík, PhD. Dátum schválenia: 04.03.2025 Dátum poslednej zmeny: 17.05.2022 Schválil: osoba zodpovedná za realizáciu študijného programu doc. Ing. Andrea Furková, PhD., osoba zodpovedná za realizáciu študijného programu doc. Dr. Ing. Miroslav Hudec, osoba zodpovedná za realizáciu študijného programu prof. Ing. Ivan Brezina, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Martin Mišút, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Jaroslav Kultan, PhD.\n\nINFORMAČNÝ LIST PREDMETU Vysoká škola: Ekonomická univerzita v Bratislave Fakulta: Fakulta hospodárskej informatiky Kód predmetu: KOVE FHI/ IIB21520/22 Názov predmetu: Viackriteriálne rozhodovanie Druh, rozsah a metóda vzdelávacích činností: Forma výučby: Prednáška / Cvičenie Odporúčaný rozsah výučby ( v hodinách ): Týždenný: 2 / 2 Za obdobie štúdia: 26 / 26 Metóda štúdia: prezenčná Počet kreditov: 5 Odporúčaný semester/trimester štúdia: 2. Stupeň štúdia: II.",
+          "score": 0.6724972043420961
+        },
+        {
+          "id": "predmet1.pdf#87",
+          "file": "predmet1.pdf",
+          "text": "eriálneho rozhodovania. Bratislava : Vydavateľstvo EKONÓM, 2014. 3. Vincent Barichard, Matthias Ehrgott, Xavier Gandibleux, and Vincent T'Kindt. 2009. Multiobjective Programming and Goal Programming: Theoretical Results and Practical Applications (1st. ed.). Springer Publishing Company, Incorporated. 4. Constantin Zopounidis, Michael Doumpos: Multiple Criteria Decision Making: Applications in Management and Engineering 1st ed. 2017 Edition Jazyk, ktorého znalosť je potrebná na absolvovanie predmetu: slovenský, anglický Poznámky: Hodnotenie predmetov Celkový počet hodnotených študentov: 710 ABCDEFX 17.1818.1720.2816.4822.825.07 Vyučujúci: doc. Ing. Andrea Furková, PhD., Ing. Daniel Dudek, Peter Knížat, PhD., MSc. Dátum schválenia: 04.03.2025 Dátum poslednej zmeny: 06.12.2022 Schválil: osoba zodpovedná za realizáciu študijného programu doc. Ing. Andrea Furková, PhD., osoba zodpovedná za realizáciu študijného programu doc. Dr. Ing. Miroslav Hudec, osoba zodpovedná za realizáciu študijného programu prof. Ing. Ivan Brezina, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Martin Mišút, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Jaroslav Kultan, PhD.",
+          "score": 0.6563586710698941
+        },
+        {
+          "id": "predmet2.pdf#152",
+          "file": "predmet2.pdf",
+          "text": "e z viackriteriálneho rozhodovania. Bratislava : Vydavateľstvo EKONÓM, 2014. 3. Zavadskas, Edmundas - Antucheviciene, Jurgita - Chatterjee, Prasenjit. Multiple-Criteria Decision-Making (MCDM) Techniques for Business Processes Information Management. Mdpi AG, 2019. Jazyk, ktorého znalosť je potrebná na absolvovanie predmetu: slovenský, anglický Poznámky: Hodnotenie predmetov Celkový počet hodnotených študentov: 595 ABCDEFX 26.2224.7116.978.422.691.01 Vyučujúci: Peter Knížat, PhD., MSc., Ing. Daniel Dudek, Ing. Michal Bogár Dátum schválenia: 04.03.2025 Dátum poslednej zmeny: 06.11.2025 Schválil: osoba zodpovedná za realizáciu študijného programu doc. Ing. Andrea Furková, PhD., osoba zodpovedná za realizáciu študijného programu doc. Dr. Ing. Miroslav Hudec, osoba zodpovedná za realizáciu študijného programu doc. Ing. Martin Mišút, CSc., osoba zodpovedná za realizáciu študijného programu prof. Ing. Ivan Brezina, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Jaroslav Kultan, PhD.",
+          "score": 0.6518470761061589
+        }
+      ],
+      "messages": {
+        "role": "user",
+        "content": "kto učí viackriterialne rozhodovanie?"
+      }
+    },
+    {
+      "timestamp": "2025-11-23T22:56:30.134Z",
+      "query": "kto učí Teória hier",
+      "chunks": [
+        {
+          "id": "predmet1.pdf#92",
+          "file": "predmet1.pdf",
+          "text": "l: osoba zodpovedná za realizáciu študijného programu doc. Ing. Andrea Furková, PhD., osoba zodpovedná za realizáciu študijného programu doc. Dr. Ing. Miroslav Hudec, osoba zodpovedná za realizáciu študijného programu prof. Ing. Ivan Brezina, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Martin Mišút, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Jaroslav Kultan, PhD.\n\nINFORMAČNÝ LIST PREDMETU Vysoká škola: Ekonomická univerzita v Bratislave Fakulta: Fakulta hospodárskej informatiky Kód predmetu: KOVE FHI/ IIB21540/22 Názov predmetu: Teória hier Druh, rozsah a metóda vzdelávacích činností: Forma výučby: Prednáška / Cvičenie Odporúčaný rozsah výučby ( v hodinách ): Týždenný: 2 / 2 Za obdobie štúdia: 26 / 26 Metóda štúdia: prezenčná Počet kreditov: 6 Odporúčaný semester/trimester štúdia: 3. Stupeň štúdia: II., P Podmieňujúce predmety: Podmienky na absolvovanie predmetu: 40 % projekt a priebežné testy 60 % záverečná skúška Pracovné zaťaženie študenta: Celkové: pracovná záťaž 5 kreditov x 26 h = 130 h.",
+          "score": 0.6363163812264252
+        },
+        {
+          "id": "predmet1.pdf#95",
+          "file": "predmet1.pdf",
+          "text": "Chobot M. – Turnovec F. – Ulašín V.: Teória hier a rozhodovania. Alfa, Bratislava 1991 Goga M.: Teória hier. Iura Edition, 2012 Dlouhý M. – Fiala, P.: Teorie ekonomických a politických her. Oeconomica, 2015 Čičková a kol.: Vybrané aplikácie teórie hier. Letra Edu, 2019 Gibbons R. Game theory for applied economics. Princenton University Press, Princenton 1992. Jazyk, ktorého znalosť je potrebná na absolvovanie predmetu: Slovenský jazyk Poznámky: Hodnotenie predmetov Celkový počet hodnotených študentov: 651 ABCDEFX 21.0416.5919.5111.6727.193.99 Vyučujúci: doc. Ing. Zuzana Čičková, PhD., Ing. Monika Ferenčáková Dátum schválenia: 04.03.2025 Dátum poslednej zmeny: 17.05.2022 Schválil: osoba zodpovedná za realizáciu študijného programu doc. Ing. Andrea Furková, PhD., osoba zodpovedná za realizáciu študijného programu doc. Dr. Ing. Miroslav Hudec, osoba zodpovedná za realizáciu študijného programu prof. Ing. Ivan Brezina, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Martin Mišút, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Jaroslav Kultan, PhD.",
+          "score": 0.6162527049288937
+        },
+        {
+          "id": "predmet1.pdf#94",
+          "file": "predmet1.pdf",
+          "text": "ocou vhodného softvéru (jazyk Python) Stručná osnova predmetu: 1. Teória rozhodovania, teória užitočnosti a súvisiace paradoxy 2. Hry proti prírode 3. Základné pojmy modelovania konfliktných situácií, hry dvoch hráčov, definícia hry, klasifikácia hier, problémy rovnovážneho rozhodovania v hrách 4. Bimaticové hry, rovnovážne riešenie hry, riešenie hry v čistých stratégiách, riešenie hry v zmiešaných stratégiách (špeciálne typy hier).\n\n5. Bimaticové hry, riešenie hry v zmiešaných stratégiách (špeciálne typy hier), podmienky optimálnosti Kuhna-Tuckera, riešenie hry v zmiešaných stratégiách, kooperatívne riešenie bimaticovej hry. 6. Maticové hry, rovnovážne stratégie hráčov, ich existencia a vlastnosti, riešenie hry v čistých stratégiách, riešenie hry v zmiešaných stratégiách (špeciálne typy hier) 7. Maticové hry, riešenie hry v zmiešaných stratégiách, vzťahy medzi maticovými hrami a úlohami lineárneho programovania 8. Hry viacerých hráčov, nekooperatívne riešenie hier 9. Hry viacerých hráčov, kooperatívne riešenie hier 10. Hry viacerých hráčov, hlasovacie hry 11. Opakované hry 12. Hry v rozvinutom tvare 13. Aplikácia teórie hier v rôznych oblastiach (ukážky rôznych praktických aplikácií) Odporúčaná literatúra: Chobot M. – Turnovec F. – Ulašín V.: Teória hier a rozhodovania. Alfa, Bratislava 1991 Goga M.: Teória hier. Iura Edition, 2012 Dlouhý M. – Fiala, P.",
+          "score": 0.5775554547296173
+        }
+      ],
+      "messages": {
+        "role": "user",
+        "content": "kto učí Teória hier"
+      }
+    },
+    {
+      "timestamp": "2025-11-23T22:56:56.165Z",
+      "query": "kto učí Machine learning",
+      "chunks": [
+        {
+          "id": "predmet1.pdf#103",
+          "file": "predmet1.pdf",
+          "text": "1.0937.521.887.8110.161.56 Vyučujúci: prof. Ing. Ivan Brezina, CSc., Ing. Pavel Gežík, PhD. Dátum schválenia: 04.03.2025 Dátum poslednej zmeny: 17.05.2022 Schválil: osoba zodpovedná za realizáciu študijného programu doc. Ing. Andrea Furková, PhD., osoba zodpovedná za realizáciu študijného programu doc. Dr. Ing. Miroslav Hudec, osoba zodpovedná za realizáciu študijného programu prof. Ing. Ivan Brezina, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Martin Mišút, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Jaroslav Kultan, PhD.\n\nINFORMAČNÝ LIST PREDMETU Vysoká škola: Ekonomická univerzita v Bratislave Fakulta: Fakulta hospodárskej informatiky Kód predmetu: KŠ FHI/IID22100/21 Názov predmetu: Machine learning Druh, rozsah a metóda vzdelávacích činností: Forma výučby: Prednáška / Cvičenie Odporúčaný rozsah výučby ( v hodinách ): Týždenný: 2 / 2 Za obdobie štúdia: 26 / 26 Metóda štúdia: prezenčná Počet kreditov: 6 Odporúčaný semester/trimester štúdia: 3. Stupeň štúdia: II.",
+          "score": 0.6312912881253776
+        },
+        {
+          "id": "predmet1.pdf#105",
+          "file": "predmet1.pdf",
+          "text": "g populárnej Scikit-learn a TensorFlow − Kompetencie − študenti budú schopní používať získané vedomosti a zručnosti pri riešení úloh machine learning. Stručná osnova predmetu: Predmet predstavuje oblasť machine learning, ktorá sa v súčasnej dobe intenzívne rozvíja v úzkej súvislosti s umelou inteligenciou. Podáva prehľad základných typov machine learning, hlavných problémov a metód a uvádza niektoré typické algoritmy.\n\nOdporúčaná literatúra: 1. MŰLLER, A. C., & GUIDO, S. (2016). Introduction to Machine Learning with Python: A Guide for Data Scientists (1st ed.). O’Reilly Media. ISBN 978-1-449-36941-5 GÉRON, A. (2019). Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems (2nd ed.). O’Reilly Media. ISBN 978-1492032649 2. AMR, T. (2020). Hands-On Machine Learning with scikit-learn and Scientific Python Toolkits: A practical guide to implementing supervised and unsupervised machine learning algorithms in Python. Packt Publishing. 3. ALBON, C. (2018). Machine Learning with Python Cookbook: Practical Solutions from Preprocessing to Deep Learning (1st ed.). O’Reilly Media. ISBN 978-1491989388 4. LIU, Y. (2020). Python Machine Learning By Example: Build intelligent systems using Python, TensorFlow 2, PyTorch, and scikit-learn (3rd ed.). Packt Publishing.",
+          "score": 0.5759929129101702
+        },
+        {
+          "id": "predmet2.pdf#61",
+          "file": "predmet2.pdf",
+          "text": "n a responsible way. SPRINGER. 9. Pickover, C. A. (2024). Artificial Intelligence: An illustrated history. Union Square & Co. 10. Crawford, K. (2022). Atlas of AI: Power, politics, and the planetary costs of Artificial Intelligence. Yale University Press. Jazyk, ktorého znalosť je potrebná na absolvovanie predmetu: English Poznámky: Hodnotenie predmetov Celkový počet hodnotených študentov: 0 ABCDEFX 0.00.00.00.00.00.0 Vyučujúci: RNDr. Eva Rakovská, PhD. Dátum schválenia: 21.03.2025\n\nDátum poslednej zmeny: 06.11.2025 Schválil: osoba zodpovedná za realizáciu študijného programu doc. Ing. Andrea Furková, PhD., osoba zodpovedná za realizáciu študijného programu doc. Dr. Ing. Miroslav Hudec, osoba zodpovedná za realizáciu študijného programu doc. Ing. Martin Mišút, CSc., osoba zodpovedná za realizáciu študijného programu prof. Ing. Ivan Brezina, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Jaroslav Kultan, PhD.",
+          "score": 0.5559951459380946
+        }
+      ],
+      "messages": {
+        "role": "user",
+        "content": "kto učí Machine learning"
+      }
+    },
+    {
+      "timestamp": "2025-11-23T22:57:14.258Z",
+      "query": "kto učí Simulačné modely",
+      "chunks": [
+        {
+          "id": "predmet1.pdf#77",
+          "file": "predmet1.pdf",
+          "text": "2012. 5. Kvantitatívne metódy na podporu logistických procesov, Ivan Brezina – Pavel Gežík - Zuzana Čičková. Bratislava : Vydavateľstvo EKONÓM, 2009. Jazyk, ktorého znalosť je potrebná na absolvovanie predmetu: slovenský, anglický Poznámky: Hodnotenie predmetov Celkový počet hodnotených študentov: 0 ABCDEFX 0.00.00.00.00.00.0 Vyučujúci: prof. Ing. Ivan Brezina, CSc., Ing. Pavel Gežík, PhD. Dátum schválenia: 04.03.2025 Dátum poslednej zmeny: 27.03.2024 Schválil: osoba zodpovedná za realizáciu študijného programu doc. Ing. Andrea Furková, PhD., osoba zodpovedná za realizáciu študijného programu doc. Dr. Ing. Miroslav Hudec, osoba zodpovedná za realizáciu študijného programu prof. Ing. Ivan Brezina, CSc., osoba zodpovedná\n\nza realizáciu študijného programu doc. Ing. Martin Mišút, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Jaroslav Kultan, PhD.\n\nINFORMAČNÝ LIST PREDMETU Vysoká škola: Ekonomická univerzita v Bratislave Fakulta: Fakulta hospodárskej informatiky Kód predmetu: KOVE FHI/ IIB21250/22 Názov predmetu: Simulačné modely Druh, rozsah a metóda vzdelávacích činností: Forma výučby: Prednáška / Cvičenie Odporúčaný rozsah výučby ( v hodinách ): Týždenný: 2 / 2 Za obdobie štúdia: 26 / 26 Metóda štúdia: prezenčná Počet kreditov: 5 Odporúčaný semester/trimester štúdia: 2. Stupeň štúdia: II.",
+          "score": 0.6087576689772971
+        },
+        {
+          "id": "predmet1.pdf#subject",
+          "file": "predmet1.pdf",
+          "text": "SUBJECT-LEVEL: predmet1.pdf (centroid of 115 chunks)",
+          "score": 0.540109888622756
+        },
+        {
+          "id": "predmet1.pdf#79",
+          "file": "predmet1.pdf",
+          "text": "e s aplikáciou simulačných metód pri analýze ekonomických problémov v oblasti teórie hromadnej obsluhy a riadenia zásob využitím simulačného softvéru. Stručná osnova predmetu: 1. Úvod do problematiky simulácie. Analytické modely a simulačné modely . 2. Statická Monte Carlo simulácia. Riešenie úloh pomocou metódy Monte Carlo. 3. Princíp simulácie diskrétnych udalostí. 4. Pojem náhodného čísla., pseudonáhodné čísla. Metódy generovania náhodných čísiel. Testovanie generovaných náhodných čísiel. 5. Diskrétne a spojité pravdepodobnostné rozdelenia.\n\n6. Analýza vstupných údajov simulačného modelu. 7. Validácia a verifikácia simulačného modelu. 8. Analýza výstupných údajov simulačného modelu. 9. Simulačná optimalizácia a porovnávanie variantov. 10. Prehlaď simulačných softvérov 11. Aplikácia simulačných modelov v teórii hromadnej obsluhy 12. .Aplikácia simulačných modelov v teórii zásob 13. Prípadové štúdie Odporúčaná literatúra: Domonkos, T.: Simulácie. Bratislava : Letra Edu, 2018. 80 s. ISBN 978-80-89962-01-3. 2. Dlouhý, M., Fábry, J., Kuncová, M., Hladík, T.: Simulace podnikových procesú. Brno: Computer Press, 2011. 206 s. ISBN 978-80-251-3449-8. 3. Banks, J., Carson Ii, S. J., Nelson, B. N., Nicol, D. M.: Discrete-event system simulation. New Jersey: Pearson Prentice Hall, 2005, 608 s. ISBN 0-13-144679-7. 4. Law, A. M.: Simulation Modeling and Ananlysis.",
+          "score": 0.539105279700027
+        }
+      ],
+      "messages": {
+        "role": "user",
+        "content": "kto učí Simulačné modely"
+      }
+    }
+  ],
+  "s-micbs5bw-4a33e04d": [
+    {
+      "timestamp": "2025-11-23T23:04:36.756Z",
+      "query": "Na základe môjho profilu prosím odporuč vhodné témy záverečnej práce.",
+      "chunks": [
+        {
+          "id": "predmet1.pdf#63",
+          "file": "predmet1.pdf",
+          "text": "podľa zadanej témy záverečnej práce + Študijný poriadok Ekonomickej univerzity v Bratislave; + Interná smernica Ekonomickej univerzity v Bratislave č. 8/2017 o záverečných a habilitačných prácach; Jazyk, ktorého znalosť je potrebná na absolvovanie predmetu: Slovenský jazyk, anglický jazyk Poznámky: Hodnotenie predmetov Celkový počet hodnotených študentov: 198 NZZ 1.5298.48 Vyučujúci: doc. Ing. Michal Páleš, PhD. Dátum schválenia: 04.03.2025 Dátum poslednej zmeny: 15.05.2022 Schválil: osoba zodpovedná za realizáciu študijného programu doc. Ing. Andrea Furková, PhD., osoba zodpovedná za realizáciu študijného programu doc. Dr. Ing. Miroslav Hudec, osoba zodpovedná za realizáciu študijného programu prof. Ing. Ivan Brezina, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Martin Mišút, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Jaroslav Kultan, PhD.\n\nINFORMAČNÝ LIST PREDMETU Vysoká škola: Ekonomická univerzita v Bratislave Fakulta: Fakulta hospodárskej informatiky Kód predmetu: KAI FHI/ IIA21910/22 Názov predmetu: Seminár k záverečnej práci II Druh, rozsah a metóda vzdelávacích činností: Forma výučby: Prednáška / Cvičenie Odporúčaný rozsah výučby ( v hodinách ): Týždenný: 0 / 2 Za obdobie štúdia: 0 / 26 Metóda štúdia: prezenčná Počet kreditov: 2 Odporúčaný semester/trimester štúdia: 4. Stupeň štúdia: II.",
+          "score": 0.5343600537727081
+        },
+        {
+          "id": "predmet1.pdf#62",
+          "file": "predmet1.pdf",
+          "text": "dajov a metódy spracovania, zvoliť metódy validácie výsledkov D. akcentovať etické zásady a pravidlá akademického písania. Stručná osnova predmetu: 1. Diskusia k východiskovým predpokladom z hľadiska analýzy obsahového zamerania práce a predpokladaných výstupov 2. Diskusia k využívaniu databáz Web of Science / Scopus, platformy ReserchaGate a domácej literatúry; 3. Seminár k právnym aspektom akademického písania; 4. Seminár k etickým aspektom akademického písania; 5. Prezentácia prehľadu relevantných domácich zdrojov k téme záverečnej práce; 6. Prezentácia prehľadu relevantných zahraničných zdrojov k téme záverečnej práce;\n\n7. Diskusia k identifikovaným oblastiam, v ktorých môže záverečná práca viesť k novým poznatkom; 8. Stanovenie cieľov záverečnej práce; 9. Diskusia k výberu metód navrhovaných na dosiahnutie cieľov práce; 10. Diskusia k voľbe spôsobov validácie zistení a výsledkov; 11. Prezentácia prehľadovej časti (prvá kapitola) záverečnej práce; 12. Prezentácia návrhu metodickej časti (druhá kapitola) práce; 13. Vyhodnocovanie priebežného spracovania Odporúčaná literatúra: podľa zadanej témy záverečnej práce + Študijný poriadok Ekonomickej univerzity v Bratislave; + Interná smernica Ekonomickej univerzity v Bratislave č.",
+          "score": 0.5291393761139722
+        },
+        {
+          "id": "predmet1.pdf#subject",
+          "file": "predmet1.pdf",
+          "text": "SUBJECT-LEVEL: predmet1.pdf (centroid of 115 chunks)",
+          "score": 0.5138329531853284
+        }
+      ],
+      "messages": {
+        "role": "user",
+        "content": "Na základe môjho profilu prosím odporuč vhodné témy záverečnej práce."
+      }
+    },
+    {
+      "timestamp": "2025-11-23T23:04:57.243Z",
+      "query": "kto vyučuje Machine learning",
+      "chunks": [
+        {
+          "id": "predmet1.pdf#103",
+          "file": "predmet1.pdf",
+          "text": "1.0937.521.887.8110.161.56 Vyučujúci: prof. Ing. Ivan Brezina, CSc., Ing. Pavel Gežík, PhD. Dátum schválenia: 04.03.2025 Dátum poslednej zmeny: 17.05.2022 Schválil: osoba zodpovedná za realizáciu študijného programu doc. Ing. Andrea Furková, PhD., osoba zodpovedná za realizáciu študijného programu doc. Dr. Ing. Miroslav Hudec, osoba zodpovedná za realizáciu študijného programu prof. Ing. Ivan Brezina, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Martin Mišút, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Jaroslav Kultan, PhD.\n\nINFORMAČNÝ LIST PREDMETU Vysoká škola: Ekonomická univerzita v Bratislave Fakulta: Fakulta hospodárskej informatiky Kód predmetu: KŠ FHI/IID22100/21 Názov predmetu: Machine learning Druh, rozsah a metóda vzdelávacích činností: Forma výučby: Prednáška / Cvičenie Odporúčaný rozsah výučby ( v hodinách ): Týždenný: 2 / 2 Za obdobie štúdia: 26 / 26 Metóda štúdia: prezenčná Počet kreditov: 6 Odporúčaný semester/trimester štúdia: 3. Stupeň štúdia: II.",
+          "score": 0.6617745411638009
+        },
+        {
+          "id": "predmet1.pdf#subject",
+          "file": "predmet1.pdf",
+          "text": "SUBJECT-LEVEL: predmet1.pdf (centroid of 115 chunks)",
+          "score": 0.575253959645634
+        },
+        {
+          "id": "predmet2.pdf#61",
+          "file": "predmet2.pdf",
+          "text": "n a responsible way. SPRINGER. 9. Pickover, C. A. (2024). Artificial Intelligence: An illustrated history. Union Square & Co. 10. Crawford, K. (2022). Atlas of AI: Power, politics, and the planetary costs of Artificial Intelligence. Yale University Press. Jazyk, ktorého znalosť je potrebná na absolvovanie predmetu: English Poznámky: Hodnotenie predmetov Celkový počet hodnotených študentov: 0 ABCDEFX 0.00.00.00.00.00.0 Vyučujúci: RNDr. Eva Rakovská, PhD. Dátum schválenia: 21.03.2025\n\nDátum poslednej zmeny: 06.11.2025 Schválil: osoba zodpovedná za realizáciu študijného programu doc. Ing. Andrea Furková, PhD., osoba zodpovedná za realizáciu študijného programu doc. Dr. Ing. Miroslav Hudec, osoba zodpovedná za realizáciu študijného programu doc. Ing. Martin Mišút, CSc., osoba zodpovedná za realizáciu študijného programu prof. Ing. Ivan Brezina, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Jaroslav Kultan, PhD.",
+          "score": 0.5712987821225415
+        }
+      ],
+      "messages": {
+        "role": "user",
+        "content": "kto vyučuje Machine learning"
+      }
+    }
+  ],
+  "s-micbxlxo-b6126f86": [
+    {
+      "timestamp": "2025-11-23T23:08:52.054Z",
+      "query": "Na základe môjho profilu prosím odporuč vhodné témy záverečnej práce.",
+      "chunks": [
+        {
+          "id": "predmet1.pdf#63",
+          "file": "predmet1.pdf",
+          "text": "podľa zadanej témy záverečnej práce + Študijný poriadok Ekonomickej univerzity v Bratislave; + Interná smernica Ekonomickej univerzity v Bratislave č. 8/2017 o záverečných a habilitačných prácach; Jazyk, ktorého znalosť je potrebná na absolvovanie predmetu: Slovenský jazyk, anglický jazyk Poznámky: Hodnotenie predmetov Celkový počet hodnotených študentov: 198 NZZ 1.5298.48 Vyučujúci: doc. Ing. Michal Páleš, PhD. Dátum schválenia: 04.03.2025 Dátum poslednej zmeny: 15.05.2022 Schválil: osoba zodpovedná za realizáciu študijného programu doc. Ing. Andrea Furková, PhD., osoba zodpovedná za realizáciu študijného programu doc. Dr. Ing. Miroslav Hudec, osoba zodpovedná za realizáciu študijného programu prof. Ing. Ivan Brezina, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Martin Mišút, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Jaroslav Kultan, PhD.\n\nINFORMAČNÝ LIST PREDMETU Vysoká škola: Ekonomická univerzita v Bratislave Fakulta: Fakulta hospodárskej informatiky Kód predmetu: KAI FHI/ IIA21910/22 Názov predmetu: Seminár k záverečnej práci II Druh, rozsah a metóda vzdelávacích činností: Forma výučby: Prednáška / Cvičenie Odporúčaný rozsah výučby ( v hodinách ): Týždenný: 0 / 2 Za obdobie štúdia: 0 / 26 Metóda štúdia: prezenčná Počet kreditov: 2 Odporúčaný semester/trimester štúdia: 4. Stupeň štúdia: II.",
+          "score": 0.5343600537727081
+        },
+        {
+          "id": "predmet1.pdf#62",
+          "file": "predmet1.pdf",
+          "text": "dajov a metódy spracovania, zvoliť metódy validácie výsledkov D. akcentovať etické zásady a pravidlá akademického písania. Stručná osnova predmetu: 1. Diskusia k východiskovým predpokladom z hľadiska analýzy obsahového zamerania práce a predpokladaných výstupov 2. Diskusia k využívaniu databáz Web of Science / Scopus, platformy ReserchaGate a domácej literatúry; 3. Seminár k právnym aspektom akademického písania; 4. Seminár k etickým aspektom akademického písania; 5. Prezentácia prehľadu relevantných domácich zdrojov k téme záverečnej práce; 6. Prezentácia prehľadu relevantných zahraničných zdrojov k téme záverečnej práce;\n\n7. Diskusia k identifikovaným oblastiam, v ktorých môže záverečná práca viesť k novým poznatkom; 8. Stanovenie cieľov záverečnej práce; 9. Diskusia k výberu metód navrhovaných na dosiahnutie cieľov práce; 10. Diskusia k voľbe spôsobov validácie zistení a výsledkov; 11. Prezentácia prehľadovej časti (prvá kapitola) záverečnej práce; 12. Prezentácia návrhu metodickej časti (druhá kapitola) práce; 13. Vyhodnocovanie priebežného spracovania Odporúčaná literatúra: podľa zadanej témy záverečnej práce + Študijný poriadok Ekonomickej univerzity v Bratislave; + Interná smernica Ekonomickej univerzity v Bratislave č.",
+          "score": 0.5291393761139722
+        },
+        {
+          "id": "predmet1.pdf#subject",
+          "file": "predmet1.pdf",
+          "text": "SUBJECT-LEVEL: predmet1.pdf (centroid of 115 chunks)",
+          "score": 0.5138329531853284
+        }
+      ],
+      "messages": {
+        "role": "user",
+        "content": "Na základe môjho profilu prosím odporuč vhodné témy záverečnej práce."
+      }
+    },
+    {
+      "timestamp": "2025-11-23T23:09:06.180Z",
+      "query": "kto vyučuje \tSoftvérové inžinierstvo II",
+      "chunks": [
+        {
+          "id": "predmet1.pdf#8",
+          "file": "predmet1.pdf",
+          "text": "dná za realizáciu študijného programu doc. Ing. Martin Mišút, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Jaroslav Kultan, PhD.\n\nINFORMAČNÝ LIST PREDMETU Vysoká škola: Ekonomická univerzita v Bratislave Fakulta: Fakulta hospodárskej informatiky Kód predmetu: KAI FHI/ IIA21520/21 Názov predmetu: Softvérové inžinierstvo II Druh, rozsah a metóda vzdelávacích činností: Forma výučby: Prednáška / Cvičenie Odporúčaný rozsah výučby ( v hodinách ): Týždenný: 2 / 2 Za obdobie štúdia: 26 / 26 Metóda štúdia: prezenčná Počet kreditov: 5 Odporúčaný semester/trimester štúdia: 2. Stupeň štúdia: II., P Podmieňujúce predmety: Podmienky na absolvovanie predmetu: Skúška 60% hodnotenia. Skúška pozostáva z dvoch častí: testu a úlohy z OO modelovania. Testom sa overuje dosiahnutá úroveň výsledkov vzdelávania A., C., D., E., F., G., riešením problémovej úlohy sa overuje dosiahnutá úroveň výsledkov vzdelávania B., D., E., F. Cvičenia 40% Náplňou cvičení je vypracovanie a obhájenie projektu, na ktorom študenti pracujú v skupinách, ktoré majú definovaného svojho tím lídra. Tím lídra si volia študenti spomedzi seba. Prácu v skupinách si študenti organizujú autonómne a riadi ju teamlíder.",
+          "score": 0.7084024052797226
+        },
+        {
+          "id": "predmet1.pdf#3",
+          "file": "predmet1.pdf",
+          "text": "nie predmetu: slovenský jazyk/ anglický jazyk Poznámky: Hodnotenie predmetov Celkový počet hodnotených študentov: 653 ABCDEFX 15.3124.531.8520.067.50.77 Vyučujúci: doc. Dr. Ing. Miroslav Hudec, Ing. Veronika Horniaková, PhD. Dátum schválenia: 04.03.2025 Dátum poslednej zmeny: 18.05.2022 Schválil: osoba zodpovedná za realizáciu študijného programu doc. Ing. Andrea Furková, PhD., osoba zodpovedná za realizáciu študijného programu doc. Dr. Ing. Miroslav Hudec, osoba zodpovedná za realizáciu študijného programu prof. Ing. Ivan Brezina, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Martin Mišút, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Jaroslav Kultan, PhD.\n\nINFORMAČNÝ LIST PREDMETU Vysoká škola: Ekonomická univerzita v Bratislave Fakulta: Fakulta hospodárskej informatiky Kód predmetu: KAI FHI/ IIA21510/21 Názov predmetu: Softvérové inžinierstvo I Druh, rozsah a metóda vzdelávacích činností: Forma výučby: Prednáška / Cvičenie Odporúčaný rozsah výučby ( v hodinách ): Týždenný: 2 / 2 Za obdobie štúdia: 26 / 26 Metóda štúdia: prezenčná Počet kreditov: 5 Odporúčaný semester/trimester štúdia: 1. Stupeň štúdia: II., P Podmieňujúce predmety: Podmienky na absolvovanie predmetu: Skúška 60% hodnotenia. Skúška pozostáva z dvoch častí: testu a konkrétnej problémovej úlohy na riešenie. Testom sa overuje dosiahnutá úroveň výsledkov vzdelávania A., C.",
+          "score": 0.6748191799691886
+        },
+        {
+          "id": "predmet2.pdf#164",
+          "file": "predmet2.pdf",
+          "text": "l: osoba zodpovedná za realizáciu študijného programu doc. Ing. Andrea Furková, PhD., osoba zodpovedná za realizáciu študijného programu doc. Dr. Ing. Miroslav Hudec, osoba zodpovedná za realizáciu študijného programu doc. Ing. Martin Mišút, CSc., osoba zodpovedná za realizáciu študijného programu prof. Ing. Ivan Brezina, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Jaroslav Kultan, PhD.\n\nINFORMAČNÝ LIST PREDMETU Vysoká škola: Ekonomická univerzita v Bratislave Fakulta: Fakulta hospodárskej informatiky Kód predmetu: KŠ FHI/IID22007/21 Názov predmetu: Štatistické metódy II Druh, rozsah a metóda vzdelávacích činností: Forma výučby: Prednáška / Cvičenie Odporúčaný rozsah výučby ( v hodinách ): Týždenný: 2 / 2 Za obdobie štúdia: 26 / 26 Metóda štúdia: prezenčná Počet kreditov: 6 Odporúčaný semester/trimester štúdia: 3. Stupeň štúdia: I.",
+          "score": 0.6519215895765232
+        }
+      ],
+      "messages": {
+        "role": "user",
+        "content": "kto vyučuje \tSoftvérové inžinierstvo II"
+      }
+    },
+    {
+      "timestamp": "2025-11-23T23:09:41.465Z",
+      "query": "kto vyučuje \tSoftvérové inžinierstvo II",
+      "chunks": [
+        {
+          "id": "predmet1.pdf#8",
+          "file": "predmet1.pdf",
+          "text": "dná za realizáciu študijného programu doc. Ing. Martin Mišút, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Jaroslav Kultan, PhD.\n\nINFORMAČNÝ LIST PREDMETU Vysoká škola: Ekonomická univerzita v Bratislave Fakulta: Fakulta hospodárskej informatiky Kód predmetu: KAI FHI/ IIA21520/21 Názov predmetu: Softvérové inžinierstvo II Druh, rozsah a metóda vzdelávacích činností: Forma výučby: Prednáška / Cvičenie Odporúčaný rozsah výučby ( v hodinách ): Týždenný: 2 / 2 Za obdobie štúdia: 26 / 26 Metóda štúdia: prezenčná Počet kreditov: 5 Odporúčaný semester/trimester štúdia: 2. Stupeň štúdia: II., P Podmieňujúce predmety: Podmienky na absolvovanie predmetu: Skúška 60% hodnotenia. Skúška pozostáva z dvoch častí: testu a úlohy z OO modelovania. Testom sa overuje dosiahnutá úroveň výsledkov vzdelávania A., C., D., E., F., G., riešením problémovej úlohy sa overuje dosiahnutá úroveň výsledkov vzdelávania B., D., E., F. Cvičenia 40% Náplňou cvičení je vypracovanie a obhájenie projektu, na ktorom študenti pracujú v skupinách, ktoré majú definovaného svojho tím lídra. Tím lídra si volia študenti spomedzi seba. Prácu v skupinách si študenti organizujú autonómne a riadi ju teamlíder.",
+          "score": 0.7084360013235618
+        },
+        {
+          "id": "predmet1.pdf#3",
+          "file": "predmet1.pdf",
+          "text": "nie predmetu: slovenský jazyk/ anglický jazyk Poznámky: Hodnotenie predmetov Celkový počet hodnotených študentov: 653 ABCDEFX 15.3124.531.8520.067.50.77 Vyučujúci: doc. Dr. Ing. Miroslav Hudec, Ing. Veronika Horniaková, PhD. Dátum schválenia: 04.03.2025 Dátum poslednej zmeny: 18.05.2022 Schválil: osoba zodpovedná za realizáciu študijného programu doc. Ing. Andrea Furková, PhD., osoba zodpovedná za realizáciu študijného programu doc. Dr. Ing. Miroslav Hudec, osoba zodpovedná za realizáciu študijného programu prof. Ing. Ivan Brezina, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Martin Mišút, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Jaroslav Kultan, PhD.\n\nINFORMAČNÝ LIST PREDMETU Vysoká škola: Ekonomická univerzita v Bratislave Fakulta: Fakulta hospodárskej informatiky Kód predmetu: KAI FHI/ IIA21510/21 Názov predmetu: Softvérové inžinierstvo I Druh, rozsah a metóda vzdelávacích činností: Forma výučby: Prednáška / Cvičenie Odporúčaný rozsah výučby ( v hodinách ): Týždenný: 2 / 2 Za obdobie štúdia: 26 / 26 Metóda štúdia: prezenčná Počet kreditov: 5 Odporúčaný semester/trimester štúdia: 1. Stupeň štúdia: II., P Podmieňujúce predmety: Podmienky na absolvovanie predmetu: Skúška 60% hodnotenia. Skúška pozostáva z dvoch častí: testu a konkrétnej problémovej úlohy na riešenie. Testom sa overuje dosiahnutá úroveň výsledkov vzdelávania A., C.",
+          "score": 0.6748389496972241
+        },
+        {
+          "id": "predmet2.pdf#164",
+          "file": "predmet2.pdf",
+          "text": "l: osoba zodpovedná za realizáciu študijného programu doc. Ing. Andrea Furková, PhD., osoba zodpovedná za realizáciu študijného programu doc. Dr. Ing. Miroslav Hudec, osoba zodpovedná za realizáciu študijného programu doc. Ing. Martin Mišút, CSc., osoba zodpovedná za realizáciu študijného programu prof. Ing. Ivan Brezina, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Jaroslav Kultan, PhD.\n\nINFORMAČNÝ LIST PREDMETU Vysoká škola: Ekonomická univerzita v Bratislave Fakulta: Fakulta hospodárskej informatiky Kód predmetu: KŠ FHI/IID22007/21 Názov predmetu: Štatistické metódy II Druh, rozsah a metóda vzdelávacích činností: Forma výučby: Prednáška / Cvičenie Odporúčaný rozsah výučby ( v hodinách ): Týždenný: 2 / 2 Za obdobie štúdia: 26 / 26 Metóda štúdia: prezenčná Počet kreditov: 6 Odporúčaný semester/trimester štúdia: 3. Stupeň štúdia: I.",
+          "score": 0.6519790843717866
+        }
+      ],
+      "messages": {
+        "role": "user",
+        "content": "kto vyučuje \tSoftvérové inžinierstvo II"
+      }
+    },
+    {
+      "timestamp": "2025-11-23T23:10:20.643Z",
+      "query": "kto vyuučuje machine learning",
+      "chunks": [
+        {
+          "id": "predmet1.pdf#103",
+          "file": "predmet1.pdf",
+          "text": "1.0937.521.887.8110.161.56 Vyučujúci: prof. Ing. Ivan Brezina, CSc., Ing. Pavel Gežík, PhD. Dátum schválenia: 04.03.2025 Dátum poslednej zmeny: 17.05.2022 Schválil: osoba zodpovedná za realizáciu študijného programu doc. Ing. Andrea Furková, PhD., osoba zodpovedná za realizáciu študijného programu doc. Dr. Ing. Miroslav Hudec, osoba zodpovedná za realizáciu študijného programu prof. Ing. Ivan Brezina, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Martin Mišút, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Jaroslav Kultan, PhD.\n\nINFORMAČNÝ LIST PREDMETU Vysoká škola: Ekonomická univerzita v Bratislave Fakulta: Fakulta hospodárskej informatiky Kód predmetu: KŠ FHI/IID22100/21 Názov predmetu: Machine learning Druh, rozsah a metóda vzdelávacích činností: Forma výučby: Prednáška / Cvičenie Odporúčaný rozsah výučby ( v hodinách ): Týždenný: 2 / 2 Za obdobie štúdia: 26 / 26 Metóda štúdia: prezenčná Počet kreditov: 6 Odporúčaný semester/trimester štúdia: 3. Stupeň štúdia: II.",
+          "score": 0.6296911289955935
+        },
+        {
+          "id": "predmet2.pdf#61",
+          "file": "predmet2.pdf",
+          "text": "n a responsible way. SPRINGER. 9. Pickover, C. A. (2024). Artificial Intelligence: An illustrated history. Union Square & Co. 10. Crawford, K. (2022). Atlas of AI: Power, politics, and the planetary costs of Artificial Intelligence. Yale University Press. Jazyk, ktorého znalosť je potrebná na absolvovanie predmetu: English Poznámky: Hodnotenie predmetov Celkový počet hodnotených študentov: 0 ABCDEFX 0.00.00.00.00.00.0 Vyučujúci: RNDr. Eva Rakovská, PhD. Dátum schválenia: 21.03.2025\n\nDátum poslednej zmeny: 06.11.2025 Schválil: osoba zodpovedná za realizáciu študijného programu doc. Ing. Andrea Furková, PhD., osoba zodpovedná za realizáciu študijného programu doc. Dr. Ing. Miroslav Hudec, osoba zodpovedná za realizáciu študijného programu doc. Ing. Martin Mišút, CSc., osoba zodpovedná za realizáciu študijného programu prof. Ing. Ivan Brezina, CSc., osoba zodpovedná za realizáciu študijného programu doc. Ing. Jaroslav Kultan, PhD.",
+          "score": 0.5440279556536227
+        },
+        {
+          "id": "predmet1.pdf#104",
+          "file": "predmet1.pdf",
+          "text": "h ): Týždenný: 2 / 2 Za obdobie štúdia: 26 / 26 Metóda štúdia: prezenčná Počet kreditov: 6 Odporúčaný semester/trimester štúdia: 3. Stupeň štúdia: II., P Podmieňujúce predmety: Podmienky na absolvovanie predmetu: 40 % semestrálny projekt spracovaný v Pythone 60 % písomná skúška Pracovné zaťaženie študenta: Pracovné zaťaženie študenta (v hodinách): 156 h účasť na prednáškach: 26 h, účasť na cvičeniach: 26 h, príprava na cvičenia: 26 h, spracovanie seminárneho projektu: 38 h, príprava na skúšku: 40 h Výsledky vzdelávania: Úspešné absolvovanie predmetu je garanciou toho, že študenti získajú základný prehľad o podstate a možnostiach machine learning (metód strojového učenia) v praxi. Vedomosti Študenti získajú: − poznatky o základných pojmoch, princípoch, metódach a postupoch používaných v machine learning, − poznatky o programovacom jazyku Python, Zručnosti − študenti sa naučia implementovať štatistické metódy do kódov − študenti budú schopní zostrojiť machine learning modely a algoritmy v programovacom jazyku Python a budú vedieť ako ich kombinovať pri riešení problémov − študenti sa naučia adekvátne aplikovať postupy a metódy machine learning − naučia sa používať knižnice v Pythone, vrátane pre machine learning populárnej Scikit-learn a TensorFlow − Kompetencie − študenti budú schopní používať získané vedomosti a zručnosti pri riešení úloh machine learning.",
+          "score": 0.5396099220046808
+        }
+      ],
+      "messages": {
+        "role": "user",
+        "content": "kto vyuučuje machine learning"
+      }
+    }
+  ]
+}
