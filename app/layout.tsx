@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Image from "next/image";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -24,9 +25,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <header className="site-header">
+          <Image
+            src="/logo_color.svg"
+            alt="Logo Fakulty hospodárskej informatiky"
+            width={40}
+            height={40}
+            priority
+          />
+          <div className="site-header__title">
+            <span>Fakulta hospodárskej informatiky</span>
+            <span className="site-header__subtitle">Ekonomická univerzita v Bratislave</span>
+          </div>
+        </header>
         {children}
       </body>
     </html>
