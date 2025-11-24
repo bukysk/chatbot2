@@ -17,6 +17,7 @@ export default function BackendToolsPage() {
   const [runtimeCfg, setRuntimeCfg] = useState<any | null>(null);
   const [cfgLoading, setCfgLoading] = useState(false);
   const [cfgMsg, setCfgMsg] = useState<string | null>(null);
+  const [expandedChunks, setExpandedChunks] = useState<Record<string, boolean>>({});
 
   async function runRebuild() {
     try {
@@ -173,7 +174,20 @@ export default function BackendToolsPage() {
                   {r.chunks.map((c: any, i: number) => (
                     <div key={i} style={{ fontSize: 12, marginBottom: 6 }}>
                       <div style={{ color: '#374151' }}><strong>{c.id}</strong> <span style={{ color: '#6b7280' }}>({c.file})</span> — <span style={{ color: '#065f46' }}>{(c.score||0).toFixed(4)}</span></div>
-                      <div style={{ color: '#374151' }}>{(c.text||'').replace(/\s+/g,' ').slice(0,200)}{(c.text||'').length>200 ? '...' : ''}</div>
+                          <div style={{ color: '#374151', marginTop: 4 }}>
+                            {expandedChunks[c.id] ? (
+                              <pre style={{ whiteSpace: 'pre-wrap', fontSize: 13, margin: 0 }}>{c.text || ''}</pre>
+                            ) : (
+                              <div style={{ fontSize: 13 }}>{String(c.text || '').replace(/\s+/g, ' ').slice(0, 400)}{(c.text||'').length>400 ? '...' : ''}</div>
+                            )}
+                            {(c.text||'').length > 400 && (
+                              <div style={{ marginTop: 6 }}>
+                                <button onClick={() => setExpandedChunks(prev => ({ ...prev, [c.id]: !prev[c.id] }))} className="px-2 py-1 rounded border text-sm">
+                                  {expandedChunks[c.id] ? 'Show less' : 'Show more'}
+                                </button>
+                              </div>
+                            )}
+                          </div>
                     </div>
                   ))}
                 </div>
@@ -208,7 +222,20 @@ export default function BackendToolsPage() {
               <div key={i} style={{ padding: 8, borderBottom: '1px solid #eee' }}>
                 <div style={{ fontSize: 12, color: '#6b7280' }}>{c.id}</div>
                 <div style={{ fontWeight: 600 }}>{c.file} — {(c.score||0).toFixed(4)}</div>
-                <div style={{ marginTop: 6 }}>{(c.text||'').replace(/\s+/g,' ').slice(0,300)}{(c.text||'').length>300 ? '...' : ''}</div>
+                <div style={{ marginTop: 6 }}>
+                  {expandedChunks[c.id] ? (
+                    <pre style={{ whiteSpace: 'pre-wrap', fontSize: 13, margin: 0 }}>{c.text || ''}</pre>
+                  ) : (
+                    <div style={{ fontSize: 13 }}>{String(c.text || '').replace(/\s+/g, ' ').slice(0, 400)}{(c.text||'').length>400 ? '...' : ''}</div>
+                  )}
+                  {(c.text||'').length > 400 && (
+                    <div style={{ marginTop: 6 }}>
+                      <button onClick={() => setExpandedChunks(prev => ({ ...prev, [c.id]: !prev[c.id] }))} className="px-2 py-1 rounded border text-sm">
+                        {expandedChunks[c.id] ? 'Show less' : 'Show more'}
+                      </button>
+                    </div>
+                  )}
+                </div>
               </div>
             ))
           ) : (
