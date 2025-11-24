@@ -32,310 +32,130 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
----
-
-## Chatbot Usage
-
-This project now includes a streaming ChatGPT-like interface powered by the OpenAI API.
-
-### 1. Set Your API Key
-
-Create (or edit) `.env.local` and set:
-
-```bash
-OPENAI_API_KEY=sk-...
-```
-
-Restart dev server after changing env variables.
-
-### 2. Run Development Server
-
-```bash
-pnpm dev
-# or npm run dev / yarn dev
-```
-
-Open http://localhost:3000 — the root page is the chat UI.
-
-### Questionnaire Flow (Thesis Recommendation)
-
-The landing page now shows a questionnaire for FHI (Fakulta Hospodárskej informatiky) students. After submitting:
-- The app builds a structured system prompt containing the anonymized profile.
-- Automatically triggers an initial request recommending 3–5 thesis topics (with descriptions, methods, rationale, risks).
-- The chat continues allowing follow-up refinement (e.g., "rozviň tému 2" or "navrhni variant pre AI").
-
-Questions captured: prior study, experienced areas (limit 3), strengths, weaknesses, interest areas (limit 3), preferred topic type, practice linkage, optional supervisor, one-sentence ideal topic.
-
-To adapt rules (format, number of topics) edit `buildSystemPrompt()` inside `app/page.tsx`.
-
-### Adding Subject Info PDFs (Context Retrieval)
-
-You can enrich recommendations with official subject information PDFs (e.g., course syllabi, info sheets). The system will pull the most relevant chunks and append them to the system prompt.
-
-1. Place your PDF files (max a few MB total) in:
-	`data/pdfs/`
-
-2. Index them to create embeddings (ensure ts-node installed, already added in devDependencies):
-```bash
-pnpm ts-node scripts/index-pdfs.ts
-```
-This produces `data/subject_chunks.json` containing chunk text + embeddings.
-
-3. Start the dev server (if not already):
-```bash
-pnpm dev
-```
-
-4. On first questionnaire submission, the API route (`app/api/chat/route.ts`) will:
-	- Take the last user message or the initial prompt.
-	- Retrieve top 3 similar chunks (vector similarity cosine).
-	- Append them under "Doplňujúci kontext z informačných listov predmetov" inside the system prompt.
-
-5. To tweak retrieval:
-	- Change `topK` in `retrieveSubjectContext(query, 3)` (file `lib/pdfIndex.ts`).
-	- Adjust chunk size / overlap in `scripts/index-pdfs.ts` (`CHUNK_SIZE`, `CHUNK_OVERLAP`).
-	- Swap embedding model (e.g. `text-embedding-3-large`).
-
-6. Re-index whenever PDFs change:
-```bash
-pnpm ts-node scripts/index-pdfs.ts
-```
-
-7. If no `subject_chunks.json` is present, the chatbot silently skips enrichment.
-
-8. For production: run the indexing step in build pipeline or pre-generate the JSON and commit it (if allowed), or store embeddings in a vector DB (Pinecone, PgVector, etc.).
-
-Security note: Keep PDFs out of `public/` if they contain internal data; current path is server-side only.
-
-### 3. Using the Chat UI
-
-- System prompt text area at the top lets you define behavior (instructions in Slovak or any language).
-- Type a message and press Enter or click Odoslať.
-- Responses stream token-by-token for a smoother experience.
-- Click "Vyčistiť chat" to reset conversation.
-
-### 4. Where the Logic Lives
-
-- Frontend: `app/page.tsx`
-- API route: `app/api/chat/route.ts` (streams OpenAI response)
-
-### 5. Changing the Model / Parameters
-
-Edit `app/api/chat/route.ts` and adjust:
-
-```ts
-model: "gpt-4o-mini",
-temperature: 0.7,
-```
-
-### 6. Deployment Notes
-
-- Ensure `OPENAI_API_KEY` is added to hosting provider environment variables.
-- Streaming uses a readable stream; supported on most modern platforms (Vercel, etc.).
-
-### 7. Troubleshooting
-
-- 500 Missing OPENAI_API_KEY: set env var and restart.
 # Chatbot2 — Next.js + OpenAI PDF-backed assistant
 
-This repository is a Next.js app that provides a streaming chat UI backed by OpenAI. The assistant can use pre-indexed PDF course materials (embeddings) to answer or recommend thesis topics without hallucinating.
+This repository is a developer-focused Next.js application that provides a streaming chat UI backed by OpenAI. It can enrich responses with context extracted from indexed PDF files (course sheets, syllabi, etc.).
 
-This README documents the current project layout, how to run it locally, how to index PDFs, and how to tune retrieval.
+This README replaces prior notes and explains how to set up, run, and use the app — including the backend developer tools and debug endpoints.
 
-## Quick start
+--
 
-1. Install dependencies (use your preferred package manager):
+## Key features
+- Streaming chat API powered by OpenAI.
+- Local PDF indexing pipeline that extracts text, chunks it, and creates embeddings written to `data/subject_chunks.json`.
+- Multiple retrieval strategies (query-only, RAG excluding subject-level centroids, centroid, hybrid).
+- Developer backend UI (`/backend`) with: index rebuild, ad-hoc retrieval, session inspection, import/delete PDFs, and runtime config overrides.
+
+## Requirements
+- Node.js 18+ and npm/pnpm/yarn
+- A valid OpenAI API key for embeddings and chat usage
+- Recommended: `pnpm` for package management (works with npm/yarn too)
+
+## Quick setup
+
+1. Clone repository and open the project root.
+
+2. Install dependencies:
 
 ```powershell
-npm install
-# or: pnpm install
+pnpm install
+# or: npm install
 ```
 
-2. Create `.env.local` with your OpenAI key and optional overrides (see config section below):
+3. Add environment variables in `.env.local` (create file in repo root):
 
 ```text
 OPENAI_API_KEY=sk-...
-# Optional tuning overrides (examples):
-# EMBEDDING_MODEL=text-embedding-3-large
-# CHAT_MODEL=gpt-4o-mini
-# CHUNK_SIZE=1400
-# CHUNK_OVERLAP=150
-# MIN_CHUNK_LENGTH=60
-# TOP_K=3
+# Optional dev-only guard for debug endpoints
+DEV_DEBUG_SECRET=some-secret
 ```
 
-3. Run the dev server:
+4. Start the dev server:
 
 ```powershell
-npm run dev
+pnpm dev
 ```
 
-Open http://localhost:3000 — the root page is the chat UI.
+Open http://localhost:3000 — the front page is the chat UI. The backend developer UI is at http://localhost:3000/backend.
 
-## Project files of interest
+## Indexing PDFs
 
-- `app/page.tsx` — frontend UI and streaming client logic.
-- `app/api/chat/route.ts` — server-side streaming API route that builds the system prompt and calls OpenAI.
-- `lib/config.ts` — canonical configuration (chunking, embedding model, prompt template). Edit env vars or this file for defaults.
-- `lib/pdfIndex.ts` — loads `data/subject_chunks.json`, computes query embeddings, and returns top-K chunks.
-- `scripts/index-pdfs.ts` — PDF indexer: extracts text, cleans & chunks it, creates embeddings, and writes `data/subject_chunks.json`.
-- `data/pdfs/` — drop your PDF files here for indexing (server-side only).
-- `data/subject_chunks.json` — generated index (chunk text + embeddings).
+Place your PDF files in `data/pdfs/`. The indexer extracts text, chunks into passages, and writes embeddings to `data/subject_chunks.json`.
 
-## Indexing PDFs (create/update embeddings)
-
-Place PDFs into `data/pdfs/` and run the indexer. The indexer cleans text, prefers sentence boundaries, merges tiny fragments, and batches embedding requests.
-
-Recommended command (use more heap for large PDFs):
+- To rebuild the index (recommended): use the backend UI button (Backend → Index PDFs) or call the rebuild endpoint:
 
 ```powershell
-# from repo root
-node --max-old-space-size=4096 -r ts-node/register "scripts/index-pdfs.ts"
-```
-
-After success you should see `Uložené embeddings -> data/subject_chunks.json` and per-file chunk counts.
-
-Re-run the indexer whenever you add/remove PDFs or change `EMBEDDING_MODEL`.
-
-## Configuration and tuning
-
-All runtime defaults live in `lib/config.ts` and are overridable via `.env.local`.
-
-- Embeddings: `EMBEDDING_MODEL` (defaults to `text-embedding-3-small`; use `text-embedding-3-large` for higher accuracy — re-index required).
-- Chat model: `CHAT_MODEL` (defaults in `lib/config.ts` — change if you need different latency/capability).
-- Chunking: `CHUNK_SIZE`, `CHUNK_OVERLAP`, `MIN_CHUNK_LENGTH` — tune these to control chunk granularity. Defaults tuned for PDFs but adjust to your documents.
-- Retrieval: `TOP_K` controls how many chunks are appended to the system prompt.
-- Prompt template: `PROMPT_TEMPLATE` in `lib/config.ts` contains the system prompt used for thesis recommendations; you can override with an env var but editing the file is easier for big template changes.
-
-Example `.env.local` snippet:
-
-```text
-OPENAI_API_KEY=sk-...
-EMBEDDING_MODEL=text-embedding-3-large
-CHAT_MODEL=gpt-4o-mini
-CHUNK_SIZE=1800
-CHUNK_OVERLAP=200
-MIN_CHUNK_LENGTH=120
-TOP_K=3
-CHAT_TEMPERATURE=0.0
+# POST to rebuild (use x-dev-secret header if you set DEV_DEBUG_SECRET)
+curl -X POST http://localhost:3000/api/debug/rebuild-index -H "x-dev-secret: your-secret"
 ```
 
 Notes:
-- Changing `EMBEDDING_MODEL` requires re-running the indexer.
-- Lower `CHAT_TEMPERATURE` (0.0–0.3) reduces hallucination.
+- Rebuild runs the indexer in-process and regenerates embeddings (this calls OpenAI and can be slow/costly).
+- After changing `EMBEDDING_MODEL` or chunking params, you must rebuild.
 
-## Diagnosing and improving chunking/retrieval
+## Backend / Dev Tools (UI at `/backend`)
 
-Tools and tips included in the repo:
+The backend page provides developer controls. Buttons and features:
 
-- `scripts/analyze-chunks.ts` — prints chunk length stats and samples to help spot TOC or header-heavy chunks. Run with:
-```powershell
-npx ts-node "scripts/analyze-chunks.ts"
-```
-- `lib/pdfIndex.ts` now logs top-K retrieved chunk ids and scores for each query — watch Next server logs when you submit queries.
+- List sessions: fetches retrieval debug sessions recorded by the chat route.
+- Fetch selected session: shows retrieval records and the chunk texts used for that session.
+- Ad-hoc Retrieval: run retrievals in different modes (`rag`, `hybrid`, `centroid`, `detailed`) against the current in-memory index.
+- Index PDFs / Indexing: triggers `POST /api/debug/rebuild-index` which regenerates embeddings and reloads the running index.
+- Available PDFs: lists files in `data/pdfs` and provides:
+  - Import PDF: upload a PDF (the endpoint saves to `data/pdfs`).
+  - Delete: removes the PDF file from `data/pdfs` (guarded by `DEV_DEBUG_SECRET` when set). Deleting does NOT automatically rebuild the index — press "Index PDFs" afterwards.
+- Runtime Config (new): load and edit runtime overrides (embedding model, TOP_K, chat temperature, chunking hints). Overrides live in `data/local_config.json` and affect retrieval and chat defaults immediately (but changing embedding model requires a rebuild to regenerate embeddings).
 
-Auto-reload / manual reload endpoint:
+## Debug endpoints (development only)
 
-- The index loader now checks `data/subject_chunks.json` file modification time (mtime) on each retrieval. When the file is updated (e.g., after re-running the indexer), the running Next dev server will automatically reload the index on the next query — no full server restart required.
-- If you prefer to trigger a reload manually, there's a small debug endpoint available during development:
+Common endpoints (all under `/api/debug`):
 
-```http
-POST http://localhost:3000/api/debug/reload-index
-GET  http://localhost:3000/api/debug/reload-index  # returns index status and chunk count
-```
+- `POST /api/debug/rebuild-index` — rebuilds embeddings and reloads in-memory index. Guarded by `DEV_DEBUG_SECRET` when set.
+- `POST /api/debug/used-chunks` and `GET /api/debug/used-chunks?q=...` — ad-hoc retrieval; returns chunk ids, files, scores and excerpts.
+- `GET /api/debug/sessions` — lists recorded retrieval sessions.
+- `GET /api/debug/session/:id?includeTexts=1` — returns retrieval records for a session; `includeTexts=1` enriches entries with chunk text from the index.
+- `POST /api/debug/import-pdf` — upload a base64 PDF into `data/pdfs` (guarded by `DEV_DEBUG_SECRET`).
+- `POST /api/debug/delete-pdf` — delete a PDF file from `data/pdfs` (guarded by `DEV_DEBUG_SECRET`).
+- `POST/GET /api/debug/runtime-config` — read or update runtime overrides saved to `data/local_config.json` (POST guarded by `DEV_DEBUG_SECRET`).
+- `POST/GET /api/debug/chunk` — fetch a single chunk by id from the index file.
 
-The POST will force reading `data/subject_chunks.json` and return JSON `{ ok: true, reloaded: true, chunks: <N> }` on success. This is intended for local development only.
+Security: These endpoints are intended for local development only. If you expose them externally, use `DEV_DEBUG_SECRET` and secure your environment.
 
-Live retrieval debug endpoint:
+## Where runtime settings live
 
-You can inspect which chunks are returned for any query via the dev-only endpoint:
+- Defaults are in `lib/config.ts` (CHUNK_SIZE, CHUNK_OVERLAP, EMBEDDING_MODEL, TOP_K, CHAT_TEMPERATURE, etc.).
+- You can override selected values at runtime via the Backend → Runtime Config panel; overrides are saved to `data/local_config.json` and consumed by `lib/pdfIndex.ts` and `app/api/chat/route.ts` for embedding model, TOP_K defaults, and chat temperature.
 
-```http
-POST http://localhost:3000/api/debug/used-chunks
-Content-Type: application/json
+Important: changing chunking settings or embedding model in overrides will require running the rebuild to regenerate `subject_chunks.json` for those changes to take effect.
 
-Body: { "query": "Business Intelligence", "topK": 5 }
+## Data files
 
-GET http://localhost:3000/api/debug/used-chunks?q=Business%20Intelligence&top=5
-```
+- `data/pdfs/` — uploaded PDF files (server-side only).
+- `data/subject_chunks.json` — single-file index of chunks and embeddings (canonical source for retrieval).
+- `data/retrieval_debug.json` — file-backed retrieval store used to persist debug sessions across dev workers.
+- `data/local_config.json` — runtime overrides set via backend UI.
 
-Response example:
+## Notes & troubleshooting
 
-```json
-{
-	"ok": true,
-	"query": "Business Intelligence",
-	"topK": 5,
-	"chunks": [
-		{ "id": "predmet1.pdf#2", "file": "predmet1.pdf", "score": 0.4793, "text": "...excerpt..." },
-		...
-	]
-}
-```
+- Missing `OPENAI_API_KEY` will cause embedding and chat calls to fail: set the env var and restart.
+- Rebuild can be slow for many PDFs — watch server logs for progress.
+- If retrieval returns no hits, inspect `data/subject_chunks.json` and run `scripts/analyze-chunks.ts` (archived scripts are in `archive/legacy-scripts/`).
 
-This endpoint calls the same retrieval logic used by the chat route, so it reflects the exact chunks that would be appended to the system prompt. It's meant for development only.
+## Removing legacy scripts
 
-Session-based live retrieval debugging
+Old CLI scripts were archived under `archive/legacy-scripts/` to reduce repo noise. You can restore them or use the backend endpoints instead.
 
-The chat route now records retrievals per conversation session so you can inspect which chunks were used for real user traffic. Usage:
+## Development tips
 
-- When the client calls `POST /api/chat` it may include an optional `debugSessionId` string in the JSON body. If provided, the server will group retrievals under that id.
-- If the client does not provide `debugSessionId`, the server generates one and returns it in the response header `x-debug-session` on the streaming response. The frontend can capture that header and use it to poll the debug endpoints.
+- Use `DEV_DEBUG_SECRET` to protect destructive or admin operations when working on shared dev machines.
+- Prefer `rebuild-index` to regenerate embeddings; do not edit `data/subject_chunks.json` manually unless you know the format.
 
-Debug endpoints:
+--
 
-```http
-GET  http://localhost:3000/api/debug/sessions          # list active debug sessions
-GET  http://localhost:3000/api/debug/session/<id>     # fetch retrieval records for session <id>
-POST http://localhost:3000/api/debug/used-chunks      # ad-hoc retrieval (as before)
-```
+If you want, I can also:
+- Add a short QA script to measure recall@K.
+- Make delete-PDF optionally trigger an automatic rebuild (checkbox in the UI).
+- Run `pnpm exec tsc --noEmit` and start the dev server to smoke-test the new backend features.
 
-Each session record contains timestamped retrievals with `query`, `chunks` (id/file/text/score) and a small `messages` snapshot (last user message). This is intended for local development and debugging only.
-
-Common fixes:
-- If many tiny or TOC-like chunks exist: increase `CHUNK_SIZE`, increase `MIN_CHUNK_LENGTH`, or enable additional cleaning in `scripts/index-pdfs.ts` (the script already strips simple TOC/footer patterns).
-- If retrieval misses facts: try `text-embedding-3-large` (re-index) and/or increase `TOP_K`.
-
-Quantitative approach:
-- Create a small QA set and test recall@K (not included by default). Use `scripts/analyze-chunks.ts` and a simple QA script to compare settings and embedding models.
-
-## Running locally (common commands)
-
-```powershell
-# Install
-npm install
-
-# Index PDFs (rebuild embeddings)
-node --max-old-space-size=4096 -r ts-node/register "scripts/index-pdfs.ts"
-
-# Analyze chunks
-npx ts-node "scripts/analyze-chunks.ts"
-
-# Run dev server
-npm run dev
-```
-
-## Troubleshooting
-
-- `Missing OPENAI_API_KEY` or 500 errors: ensure `OPENAI_API_KEY` is set in `.env.local` and restart the dev server.
-- `Cannot find module 'dotenv/config'`: install `dotenv` with `npm install dotenv` (the indexer now imports `dotenv/config` itself).
-- Indexer OOM: increase `--max-old-space-size` or split large PDFs.
-- If the assistant replies "Nemám dostatočné informácie...": retrieval returned no supporting chunks — inspect logs and analyzer output, then re-index or increase `TOP_K`.
-
-## Production notes
-
-- Pre-generate `data/subject_chunks.json` during your build pipeline, or store embeddings in a managed vector DB for scale.
-- Keep `OPENAI_API_KEY` in your hosting provider's secrets (do NOT commit `.env.local`).
-
-## Where to look next
-
-- To change assistant behavior: edit `lib/config.ts` → `PROMPT_TEMPLATE`.
-- To tweak chunking: edit `lib/config.ts` or `.env.local` and re-run the indexer.
-- To inspect retrieval: check Next server logs (look for `[pdfIndex] top-k:` messages).
-
----
-
-If you want, I can add a short `scripts/qa-eval.ts` to measure recall@K across settings — say the word and I'll scaffold it.
+Tell me which of these you'd like next.
+# Optional tuning overrides (examples):

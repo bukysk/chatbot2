@@ -1,6 +1,7 @@
 import OpenAI from "openai";
-import { retrieveSubjectContext, retrieveSubjectContextDetailed } from "../../../lib/pdfIndex";
+import { retrieveRagChunks } from "../../../lib/pdfIndex";
 import { addRetrieval } from '../../../lib/retrievalDebugStore';
+import runtimeConfig from '../../../lib/runtimeConfig';
 import crypto from 'crypto';
 
 export const runtime = "nodejs"; // use node for streaming stability
@@ -25,17 +26,17 @@ export async function POST(req: Request) {
     let debugSessionId: string | undefined = body.debugSessionId;
     if (!debugSessionId) debugSessionId = `s-${Date.now().toString(36)}-${crypto.randomBytes(4).toString('hex')}`;
     let systemPrompt: string | undefined = body.systemPrompt;
-    const includeSubjectContext: boolean = body.includeSubjectContext ?? true; // default zapnute pre prvú správu
+    const includeSubjectContext: boolean = body.includeSubjectContext ?? runtimeConfig.getEffectiveConfig().INCLUDE_SUBJECT_CONTEXT; // default from runtime config
     if (includeSubjectContext && systemPrompt) {
       // Zostav query z poslednej user správy (ak existuje) na získanie relevantných chunkov
       const lastUser = [...messages].reverse().find(m => m.role === "user");
       const query = lastUser?.content || systemPrompt.slice(0, 500);
       try {
-        // Use the detailed retriever so we can both append texts and record ids/scores
-        const detailed = await retrieveSubjectContextDetailed(query, 3);
+        // Use RAG retrieval: return top-5 chunk-level hits (explicitly excluding centroid/subject-level entries).
+        const detailed = await retrieveRagChunks(query, 5);
         const contextChunks = detailed.map(d => d.text);
         if (contextChunks.length) {
-          systemPrompt += `\n\nDoplňujúci kontext z informačných listov predmetov (použi len ak relevantné, neparafrázuj zbytočne):\n${contextChunks.map((c,i)=>`[${i+1}] ${c}`).join('\n')}`;
+          systemPrompt += `\n\nDoplňujúci kontext z informačných listov predmetov (použi len ak relevantné, neparafrázuj zbytočne):\n${contextChunks.map((c, i) => `[${i+1}] ${c}`).join('\n')}`;
         }
         // Record retrieval in dev-only debug store (includes query, chunk ids, scores and optional message snapshot)
         try {
@@ -54,11 +55,12 @@ export async function POST(req: Request) {
       ...messages,
     ];
 
+    const temp = runtimeConfig.getEffectiveConfig().CHAT_TEMPERATURE ?? 0.7;
     const completion = await client.chat.completions.create({
       model: "gpt-4o-mini",
       messages: chatMessages.map(m => ({ role: m.role, content: m.content })),
       stream: true,
-      temperature: 0.7,
+      temperature: temp,
     });
 
     const encoder = new TextEncoder();

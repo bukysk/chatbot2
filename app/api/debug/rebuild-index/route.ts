@@ -1,9 +1,6 @@
 import { NextResponse } from 'next/server';
 import { reloadIndex } from '../../../../lib/pdfIndex';
-import { execFileSync } from 'child_process';
-import path from 'path';
-
-const INDEXER_SCRIPT = path.join(process.cwd(), 'scripts', 'index-pdfs.ts');
+import runIndexer from '../../../../lib/indexer';
 
 function checkSecret(req: Request) {
   const secretEnv = process.env.DEV_DEBUG_SECRET;
@@ -27,29 +24,15 @@ export async function POST(req: Request) {
   try {
     const check = checkSecret(req);
     if (!check.ok) return NextResponse.json({ ok: false, error: check.message }, { status: 401 });
-
-    if (!INDEXER_SCRIPT || !require('fs').existsSync(INDEXER_SCRIPT)) {
-      return NextResponse.json({ ok: false, error: 'Indexer script not found: scripts/index-pdfs.ts' }, { status: 500 });
-    }
-
-    // Run the TypeScript indexer via node+ts-node/register so we don't require a compiled build.
-    // This is intentionally synchronous for simplicity in dev; the call may take time and requires network (OpenAI) access.
-    const node = process.execPath || 'node';
-    // Use -r ts-node/register to run the TS script the same way as the developer would locally.
-    const args = ['-r', 'ts-node/register', INDEXER_SCRIPT];
-
-    let stdout = '';
-    let stderr = '';
+    // Call the indexer library directly (runs in-process and uses OPENAI_API_KEY)
     try {
-      stdout = execFileSync(node, args, { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] });
+      const res = await runIndexer();
+      // reload in-memory index
+      const count = reloadIndex();
+      return NextResponse.json({ ok: true, rebuildRan: true, chunksWritten: res.chunks, outFile: res.outFile, chunksLoaded: count });
     } catch (e: any) {
-      stderr = e.stderr?.toString?.() || String(e.message || e);
-      // still attempt to reload index if file exists
+      return NextResponse.json({ ok: false, error: String(e?.message || e) }, { status: 500 });
     }
-
-    // Try to reload the in-memory index after script runs (or even if it failed but file exists)
-    const count = reloadIndex();
-    return NextResponse.json({ ok: true, rebuildRan: true, stdout: stdout.slice(0, 20000), stderr: stderr.slice(0, 20000), chunks: count });
   } catch (err: any) {
     return NextResponse.json({ ok: false, error: String(err) }, { status: 500 });
   }
