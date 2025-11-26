@@ -56,8 +56,10 @@ export async function POST(req: Request) {
     ];
 
     const temp = runtimeConfig.getEffectiveConfig().CHAT_TEMPERATURE ?? 0.7;
+    const eff = runtimeConfig.getEffectiveConfig();
+    const modelToUse = eff.CHAT_MODEL || "gpt-4o-mini";
     const completion = await client.chat.completions.create({
-      model: "gpt-4o-mini",
+      model: modelToUse,
       messages: chatMessages.map(m => ({ role: m.role, content: m.content })),
       stream: true,
       temperature: temp,

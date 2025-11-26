@@ -5,6 +5,7 @@ import { useState, useRef, useEffect } from "react";
 type Msg = { role: "user" | "assistant"; content: string };
 
 import { PROMPT_TEMPLATE } from '../lib/config';
+import { useCallback } from 'react';
 
 const AREAS_EXPERIENCED_OPTIONS = [
   "Programovanie (Python, C, C++)",
@@ -64,12 +65,30 @@ export default function ChatPage() {
   const [debugVisible, setDebugVisible] = useState(false);
   const [debugSessionId, setDebugSessionId] = useState<string | null>(null);
   const [debugRecords, setDebugRecords] = useState<any[] | null>(null);
+  const [runtimePromptTemplate, setRuntimePromptTemplate] = useState<string | null>(null);
   const debugPollRef = useRef<number | null>(null);
   const endRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     endRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
+
+  useEffect(() => {
+    // load runtime prompt template from debug API if available
+    let mounted = true;
+    (async () => {
+      try {
+        const res = await fetch('/api/debug/runtime-config');
+        if (!res.ok) return;
+        const j = await res.json().catch(() => ({}));
+        const eff = j?.effective;
+        if (mounted && eff?.PROMPT_TEMPLATE) setRuntimePromptTemplate(String(eff.PROMPT_TEMPLATE));
+      } catch (e) {
+        // ignore
+      }
+    })();
+    return () => { mounted = false; };
+  }, []);
 
   function toggleCheckboxWithLimit(field: "areasExperienced" | "interestAreas", value: string, limit: number) {
     setFormData(prev => {
@@ -102,7 +121,8 @@ export default function ChatPage() {
     // Build a compact PROFILE block and inject into the centralized PROMPT_TEMPLATE.
     const profile = `Meno (len interné, nepoužívaj v odpovedi): ${formData.name}\nDoterajšia škola/odbor: ${formData.previousSchoolProgram}\nNajviac zažité oblasti: ${formData.areasExperienced.join(", ")}\nSilné stránky: ${formData.strengths}\nSlabšie / vyhnúť sa: ${formData.weaknesses}\nZáujmové oblasti: ${formData.interestAreas.join(", ")}\nPreferovaný typ témy: ${formData.topicType}\nPrepojenie s praxou / firmou: ${formData.practiceConnection}\nPreferovaný školiteľ / katedra (ak uviedol): ${formData.preferredSupervisor || "neuvedené"}\nIdeálna téma (vetou): ${formData.idealTopic}`;
 
-    return PROMPT_TEMPLATE.replace('{{PROFILE}}', profile);
+    const baseTemplate = runtimePromptTemplate ?? PROMPT_TEMPLATE;
+    return baseTemplate.replace('{{PROFILE}}', profile);
   }
 
   async function streamCompletion(customMessages: Msg[], sysPrompt: string) {
