@@ -181,6 +181,7 @@ export default function BackendToolsPage() {
         <Link href="/backend/runtime"><div className="card p-4">Runtime</div></Link>
         <Link href="/backend/pdfs"><div className="card p-4">PDFs</div></Link>
         <Link href="/backend/indexing"><div className="card p-4">Indexing</div></Link>
+        <Link href="/backend/instagram"><div className="card p-4">Instagram URLs</div></Link>
       </div>
       <div style={{ marginTop: 20 }}>
         <a href="/" className="text-sm text-blue-600 underline">Back to front page</a>

@@ -25,8 +25,11 @@ export async function POST(req: Request) {
     // If not provided, we generate a short id and return it in a response header so the client can poll debug endpoints.
     let debugSessionId: string | undefined = body.debugSessionId;
     if (!debugSessionId) debugSessionId = `s-${Date.now().toString(36)}-${crypto.randomBytes(4).toString('hex')}`;
-    let systemPrompt: string | undefined = body.systemPrompt;
-    const includeSubjectContext: boolean = body.includeSubjectContext ?? runtimeConfig.getEffectiveConfig().INCLUDE_SUBJECT_CONTEXT; // default from runtime config
+
+    // Pull effective runtime config once (includes PROMPT_TEMPLATE overrides from data/local_config.json)
+    const eff = runtimeConfig.getEffectiveConfig();
+    let systemPrompt: string | undefined = body.systemPrompt ?? eff.PROMPT_TEMPLATE;
+    const includeSubjectContext: boolean = body.includeSubjectContext ?? eff.INCLUDE_SUBJECT_CONTEXT; // default from runtime config
     if (includeSubjectContext && systemPrompt) {
       // Zostav query z poslednej user správy (ak existuje) na získanie relevantných chunkov
       const lastUser = [...messages].reverse().find(m => m.role === "user");
@@ -55,8 +58,7 @@ export async function POST(req: Request) {
       ...messages,
     ];
 
-    const temp = runtimeConfig.getEffectiveConfig().CHAT_TEMPERATURE ?? 0.7;
-    const eff = runtimeConfig.getEffectiveConfig();
+    const temp = eff.CHAT_TEMPERATURE ?? 0.7;
     const modelToUse = eff.CHAT_MODEL || "gpt-4o-mini";
     const completion = await client.chat.completions.create({
       model: modelToUse,
