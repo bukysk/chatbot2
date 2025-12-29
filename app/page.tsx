@@ -68,14 +68,14 @@ export default function ChatPage() {
     <div className="app-container flex flex-col min-h-screen">
       <header className="border-b py-4 px-4">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-xl font-semibold">Chat Assistant</h1>
+          <h1 className="text-xl font-semibold">Gym Bro</h1>
         </div>
       </header>
 
       <main className="flex-1 mx-auto w-full max-w-4xl px-4 py-8 flex flex-col gap-6">
         <div className="flex-1 space-y-4">
           {messages.length === 0 && (
-            <div className="text-center text-zinc-500 dark:text-zinc-400 py-12">
+            <div className="text-center text-zinc-400 py-12">
               <p>Start a conversation by typing a message below.</p>
             </div>
           )}
@@ -98,7 +98,7 @@ export default function ChatPage() {
             e.preventDefault();
             sendChatMessage();
           }}
-          className="flex flex-col gap-3 sticky bottom-0 bg-white dark:bg-zinc-900 pb-4"
+          className="flex flex-col gap-3 sticky bottom-0 bg-black pb-4"
         >
           <textarea
             className="w-full rounded-xl border p-3 text-sm min-h-24 resize-none"
@@ -119,7 +119,7 @@ export default function ChatPage() {
               <button
                 type="button"
                 onClick={() => setMessages([])}
-                className="text-xs text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300"
+                className="text-xs text-zinc-400 hover:text-zinc-300"
               >
                 Clear chat
               </button>

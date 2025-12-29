@@ -12,15 +12,14 @@ export default function BackendLayout({ children }: { children: React.ReactNode 
   const items: NavItem[] = [
     { href: '/backend', label: 'Overview' },
     { href: '/backend/sessions', label: 'Sessions' },
-    { href: '/backend/retrieval', label: 'Retrieval' },
     { href: '/backend/runtime', label: 'Runtime' },
-    { href: '/backend/pdfs', label: 'PDFs' },
-    { href: '/backend/indexing', label: 'Indexing' },
+    { href: '/backend/database', label: 'Database' },
+    { href: '/backend/gym', label: 'Gym watcher' },
   ];
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh' }}>
-      <aside style={{ width: 240, background: '#0f172a', color: '#fff', padding: 20 }}>
+    <div style={{ display: 'flex', minHeight: '100vh', background: '#000' }}>
+      <aside style={{ width: 240, background: '#0b1020', color: '#e5e7eb', padding: 20 }}>
         <h2 style={{ fontSize: 18, marginBottom: 12 }}>Backend</h2>
         <nav style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
           {items.map((it) => {
@@ -33,8 +32,8 @@ export default function BackendLayout({ children }: { children: React.ReactNode 
                   display: 'block',
                   padding: '8px 10px',
                   borderRadius: 8,
-                  color: active ? '#0f172a' : '#e6eef8',
-                  background: active ? '#e6eef8' : 'transparent',
+                  color: active ? '#0b1020' : '#e5e7eb',
+                  background: active ? '#ff6b35' : 'transparent',
                   textDecoration: 'none',
                   fontWeight: active ? 700 : 500,
                 }}
@@ -45,7 +44,7 @@ export default function BackendLayout({ children }: { children: React.ReactNode 
           })}
         </nav>
       </aside>
-      <main style={{ flex: 1, padding: 24, background: '#f8fafc' }}>
+      <main style={{ flex: 1, padding: 24, background: '#000', color: '#e5e7eb' }}>
         {children}
       </main>
     </div>

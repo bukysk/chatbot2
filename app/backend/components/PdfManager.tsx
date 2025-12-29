@@ -30,8 +30,10 @@ export default function PdfManager(props: PdfManagerProps) {
   async function onImportClick() {
     const input = fileInputRef.current;
     const file = input?.files?.[0];
-    if (!file) return alert('Select a PDF file first');
-    if (!file.name.toLowerCase().endsWith('.pdf')) return alert('Only PDF files allowed');
+    if (!file) return alert('Select a file first');
+    const allowed = ['.pdf', '.txt', '.json'];
+    const ext = file.name.toLowerCase().slice(file.name.lastIndexOf('.'));
+    if (!allowed.includes(ext)) return alert(`Only ${allowed.join(', ')} files allowed`);
     try {
       await importPdf(file);
       alert('Upload finished');
@@ -55,8 +57,8 @@ export default function PdfManager(props: PdfManagerProps) {
 
   return (
     <section className="card p-4 mb-6">
-      <h2 className="text-lg font-medium">Available PDFs</h2>
-      <p className="text-sm text-zinc-600 mb-3">PDFs found in <code>data/pdfs</code>. Use this to confirm which files will be indexed.</p>
+      <h2 className="text-lg font-medium">Database files</h2>
+      <p className="text-sm text-zinc-600 mb-3">Files in <code>data/pdfs</code> (.pdf, .txt, .json) that feed the database.</p>
       <div style={{ display: 'flex', gap: 8, alignItems: 'center', marginBottom: 8 }}>
         <button onClick={() => listPdfs().catch(() => {})} className="px-3 py-2 rounded border">List PDFs</button>
         <button onClick={() => { /* refresh */ listPdfs().catch(() => {}); }} className="px-3 py-2 rounded border">Refresh</button>
@@ -64,9 +66,9 @@ export default function PdfManager(props: PdfManagerProps) {
       </div>
 
       <div style={{ marginTop: 8, marginBottom: 8 }}>
-        <label className="text-sm font-medium">Import PDF</label>
+        <label className="text-sm font-medium">Import File</label>
         <div style={{ display: 'flex', gap: 8, alignItems: 'center', marginTop: 6 }}>
-          <input ref={fileInputRef} id="pdf-file-input" type="file" accept="application/pdf" style={{ display: 'none' }} />
+          <input ref={fileInputRef} id="pdf-file-input" type="file" accept="application/pdf,text/plain,application/json" style={{ display: 'none' }} />
           <label
             htmlFor="pdf-file-input"
             onClick={() => fileInputRef.current?.click()}
@@ -87,7 +89,7 @@ export default function PdfManager(props: PdfManagerProps) {
             onClick={onImportClick}
             className="px-3 py-2 rounded border"
           >
-            {uploadLoading ? 'Uploading…' : 'Import PDF'}
+            {uploadLoading ? 'Uploading…' : 'Import File'}
           </button>
           {uploadMsg && <div style={{ color: '#6b7280' }}>{uploadMsg}</div>}
         </div>
@@ -109,7 +111,7 @@ export default function PdfManager(props: PdfManagerProps) {
           ))}
         </ul>
       ) : (
-        <div style={{ color: '#6b7280', marginTop: 8 }}>No PDFs listed. Click "List PDFs".</div>
+        <div style={{ color: '#6b7280', marginTop: 8 }}>No files listed. Click "List PDFs".</div>
       )}
     </section>
   );

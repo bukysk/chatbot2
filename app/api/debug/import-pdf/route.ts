@@ -20,7 +20,9 @@ export async function POST(req: Request) {
     const name = body?.name;
     let content = body?.content;
     if (!name || !content) return NextResponse.json({ ok: false, error: 'Missing name or content' }, { status: 400 });
-    if (!name.toLowerCase().endsWith('.pdf')) return NextResponse.json({ ok: false, error: 'Only .pdf files allowed' }, { status: 400 });
+    const ext = path.extname(String(name)).toLowerCase();
+    const allowed = ['.pdf', '.txt', '.json'];
+    if (!allowed.includes(ext)) return NextResponse.json({ ok: false, error: `Only ${allowed.join(', ')} files allowed` }, { status: 400 });
 
     // strip data: prefix if present
     content = String(content).replace(/^data:.*;base64,/, '');

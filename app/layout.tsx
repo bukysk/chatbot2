@@ -28,15 +28,15 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <header className="site-header">
           <Image
-            src="/logo_color.svg"
-            alt="Logo Fakulty hospodárskej informatiky"
-            width={40}
-            height={40}
+            src="https://ih1.redbubble.net/image.5522694112.0403/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.u1.jpg"
+            alt="Gym Bro Logo"
+            width={50}
+            height={50}
             priority
           />
           <div className="site-header__title">
-            <span>Fakulta hospodárskej informatiky</span>
-            <span className="site-header__subtitle">Ekonomická univerzita v Bratislave</span>
+            <span>Gym Bro</span>
+            <span className="site-header__subtitle">Your AI Fitness Coach</span>
           </div>
         </header>
         {children}

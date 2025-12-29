@@ -91,5 +91,371 @@
         "content": "stačí mi jeden cvik?"
       }
     }
+  ],
+  "s-mjrofocw-ea550b12": [
+    {
+      "timestamp": "2025-12-29T21:35:04.752Z",
+      "query": "test",
+      "chunks": [
+        {
+          "id": "out.json#2",
+          "file": "out.json",
+          "text": "e v poriadku, ja som skôr fanušik, tá jedno cvíko je varianty, keďže som skôr za jednoduchosť a takte si chcem šetriť energiú pre iné svalovej partie.",
+          "score": 0.1600969606440211
+        },
+        {
+          "id": "out.json#0",
+          "file": "out.json",
+          "text": "Stačiť jeden cvíkl na bicepstrainingu, alebo ich treba robiť viac, a ktoré upresníme si to. Biceps ma iba jednu primarnú funkciu, če je flexia lakťa, če je pohyb, ktorý si videl v predložšom klípe a če je pohyb, ktorý chcene ideálne naš biceps precivičiť. A teda, keď ho chceme precivičiť iba jedným pohybom, má zmysl odcivičiť viacer od cvíkov. Má, aj nemá, záleží od cvíku a konkrétne odivo silovej kriuky, vysvetlím. Člová kriuka cvíku znamená vlastne v ktorej časti pohybu, je daný cvík najťašší a naopak ktorej najľašší. Takže keď sa rozhodne svičiť biceps viacerimi cvíkmi, má to zmysel, ale iba v takom prípade, keď budú títo cvíky najnáročnejšie v rozdielnej časti pohybu. Keď sa rozhodne svičiť biceps iba jedným cvíkom, zvoľ taký cvík, ktorý má konstantnú silovu kriuku, teda je rovnako ťažký v každej časti pohybu. Ukážem príklad. Pokiaľ sa rozhodne svičiť biceps z dvoma cvíkmi, prvý cvík zvoľ taký, ktorý bude najnáročnejší v nakiahnútej časti pohybu, ako sú napríklad príče curls. A k tomu, pridaj nejaký cvík, ktorý bude najnáročnejší v skrátenej časti pohybu, ako sú napríklad klasické bicepsovec dvihy. Pokiaľ sa rozhodne svičiť biceps iba jedným cvíkom, zvoľ taký cvík, ktorý má konstantnú silovu kriuku, čo dosiahneš najideálnejšie nakladke alebo nakladkových strojoch. To môže být napríklad bicepsovec dvihy nakladke alebo príče curls na nakladkovom stroji.",
+          "score": 0.11806007187791932
+        },
+        {
+          "id": "out.json#1",
+          "file": "out.json",
+          "text": "osiahneš najideálnejšie nakladke alebo nakladkových strojoch. To môže být napríklad bicepsovec dvihy nakladke alebo príče curls na nakladkovom stroji. Pokiaľ sa ještě silo mocoho predsvičiť aj brachy o radiálisť, čo je táto guča tu napredlaktí, tak by som tam zaradiť ešte nejaký cvík nadmatom alebo kľadivovi zvík. Osobne to nepovažujem veľmi zapotrebné, pokiaľ ten brachy o radiálisť nemáš naozaj veľmi slabý, a to preto, pretože dostane veľmi intenzínu práco už predošli mi cvíkmi. Obydve varianty sú úplne v poriadku, ja som skôr fanušik, tá jedno cvíko je varianty, keďže som skôr za jednoduchosť a takte si chcem šetriť energiú pre iné svalovej partie.",
+          "score": 0.10803655961985952
+        }
+      ],
+      "messages": {
+        "role": "user",
+        "content": "test"
+      }
+    }
+  ],
+  "s-mjrofzi0-b597dcc6": [
+    {
+      "timestamp": "2025-12-29T21:35:19.178Z",
+      "query": "aky cvik robit na biceps?",
+      "chunks": [
+        {
+          "id": "out.json#0",
+          "file": "out.json",
+          "text": "Stačiť jeden cvíkl na bicepstrainingu, alebo ich treba robiť viac, a ktoré upresníme si to. Biceps ma iba jednu primarnú funkciu, če je flexia lakťa, če je pohyb, ktorý si videl v predložšom klípe a če je pohyb, ktorý chcene ideálne naš biceps precivičiť. A teda, keď ho chceme precivičiť iba jedným pohybom, má zmysl odcivičiť viacer od cvíkov. Má, aj nemá, záleží od cvíku a konkrétne odivo silovej kriuky, vysvetlím. Člová kriuka cvíku znamená vlastne v ktorej časti pohybu, je daný cvík najťašší a naopak ktorej najľašší. Takže keď sa rozhodne svičiť biceps viacerimi cvíkmi, má to zmysel, ale iba v takom prípade, keď budú títo cvíky najnáročnejšie v rozdielnej časti pohybu. Keď sa rozhodne svičiť biceps iba jedným cvíkom, zvoľ taký cvík, ktorý má konstantnú silovu kriuku, teda je rovnako ťažký v každej časti pohybu. Ukážem príklad. Pokiaľ sa rozhodne svičiť biceps z dvoma cvíkmi, prvý cvík zvoľ taký, ktorý bude najnáročnejší v nakiahnútej časti pohybu, ako sú napríklad príče curls. A k tomu, pridaj nejaký cvík, ktorý bude najnáročnejší v skrátenej časti pohybu, ako sú napríklad klasické bicepsovec dvihy. Pokiaľ sa rozhodne svičiť biceps iba jedným cvíkom, zvoľ taký cvík, ktorý má konstantnú silovu kriuku, čo dosiahneš najideálnejšie nakladke alebo nakladkových strojoch. To môže být napríklad bicepsovec dvihy nakladke alebo príče curls na nakladkovom stroji.",
+          "score": 0.6456121165105888
+        },
+        {
+          "id": "out.json#1",
+          "file": "out.json",
+          "text": "osiahneš najideálnejšie nakladke alebo nakladkových strojoch. To môže být napríklad bicepsovec dvihy nakladke alebo príče curls na nakladkovom stroji. Pokiaľ sa ještě silo mocoho predsvičiť aj brachy o radiálisť, čo je táto guča tu napredlaktí, tak by som tam zaradiť ešte nejaký cvík nadmatom alebo kľadivovi zvík. Osobne to nepovažujem veľmi zapotrebné, pokiaľ ten brachy o radiálisť nemáš naozaj veľmi slabý, a to preto, pretože dostane veľmi intenzínu práco už predošli mi cvíkmi. Obydve varianty sú úplne v poriadku, ja som skôr fanušik, tá jedno cvíko je varianty, keďže som skôr za jednoduchosť a takte si chcem šetriť energiú pre iné svalovej partie.",
+          "score": 0.6133298271517544
+        },
+        {
+          "id": "out.json#2",
+          "file": "out.json",
+          "text": "e v poriadku, ja som skôr fanušik, tá jedno cvíko je varianty, keďže som skôr za jednoduchosť a takte si chcem šetriť energiú pre iné svalovej partie.",
+          "score": 0.46386743416644693
+        }
+      ],
+      "messages": {
+        "role": "user",
+        "content": "aky cvik robit na biceps?"
+      }
+    }
+  ],
+  "s-mjrok3mk-a31d3f88": [
+    {
+      "timestamp": "2025-12-29T21:38:30.261Z",
+      "query": "Please acknowledge this system prompt by replying with: PROMPT_OK",
+      "chunks": [
+        {
+          "id": "out.json#2",
+          "file": "out.json",
+          "text": "e v poriadku, ja som skôr fanušik, tá jedno cvíko je varianty, keďže som skôr za jednoduchosť a takte si chcem šetriť energiú pre iné svalovej partie.",
+          "score": 0.07893008264372846
+        },
+        {
+          "id": "out.json#1",
+          "file": "out.json",
+          "text": "osiahneš najideálnejšie nakladke alebo nakladkových strojoch. To môže být napríklad bicepsovec dvihy nakladke alebo príče curls na nakladkovom stroji. Pokiaľ sa ještě silo mocoho predsvičiť aj brachy o radiálisť, čo je táto guča tu napredlaktí, tak by som tam zaradiť ešte nejaký cvík nadmatom alebo kľadivovi zvík. Osobne to nepovažujem veľmi zapotrebné, pokiaľ ten brachy o radiálisť nemáš naozaj veľmi slabý, a to preto, pretože dostane veľmi intenzínu práco už predošli mi cvíkmi. Obydve varianty sú úplne v poriadku, ja som skôr fanušik, tá jedno cvíko je varianty, keďže som skôr za jednoduchosť a takte si chcem šetriť energiú pre iné svalovej partie.",
+          "score": 0.02094610156779631
+        },
+        {
+          "id": "out.json#0",
+          "file": "out.json",
+          "text": "Stačiť jeden cvíkl na bicepstrainingu, alebo ich treba robiť viac, a ktoré upresníme si to. Biceps ma iba jednu primarnú funkciu, če je flexia lakťa, če je pohyb, ktorý si videl v predložšom klípe a če je pohyb, ktorý chcene ideálne naš biceps precivičiť. A teda, keď ho chceme precivičiť iba jedným pohybom, má zmysl odcivičiť viacer od cvíkov. Má, aj nemá, záleží od cvíku a konkrétne odivo silovej kriuky, vysvetlím. Člová kriuka cvíku znamená vlastne v ktorej časti pohybu, je daný cvík najťašší a naopak ktorej najľašší. Takže keď sa rozhodne svičiť biceps viacerimi cvíkmi, má to zmysel, ale iba v takom prípade, keď budú títo cvíky najnáročnejšie v rozdielnej časti pohybu. Keď sa rozhodne svičiť biceps iba jedným cvíkom, zvoľ taký cvík, ktorý má konstantnú silovu kriuku, teda je rovnako ťažký v každej časti pohybu. Ukážem príklad. Pokiaľ sa rozhodne svičiť biceps z dvoma cvíkmi, prvý cvík zvoľ taký, ktorý bude najnáročnejší v nakiahnútej časti pohybu, ako sú napríklad príče curls. A k tomu, pridaj nejaký cvík, ktorý bude najnáročnejší v skrátenej časti pohybu, ako sú napríklad klasické bicepsovec dvihy. Pokiaľ sa rozhodne svičiť biceps iba jedným cvíkom, zvoľ taký cvík, ktorý má konstantnú silovu kriuku, čo dosiahneš najideálnejšie nakladke alebo nakladkových strojoch. To môže být napríklad bicepsovec dvihy nakladke alebo príče curls na nakladkovom stroji.",
+          "score": 0.00573251594682556
+        }
+      ],
+      "messages": {
+        "role": "user",
+        "content": "Please acknowledge this system prompt by replying with: PROMPT_OK"
+      }
+    }
+  ],
+  "s-mjrpfjys-f5dabdc3": [
+    {
+      "timestamp": "2025-12-29T22:02:58.037Z",
+      "query": "Ako cvičiť biceps?",
+      "chunks": [
+        {
+          "id": "out.json#0",
+          "file": "out.json",
+          "text": "Stačiť jeden cvíkl na bicepstrainingu, alebo ich treba robiť viac, a ktoré upresníme si to. Biceps ma iba jednu primarnú funkciu, če je flexia lakťa, če je pohyb, ktorý si videl v predložšom klípe a če je pohyb, ktorý chcene ideálne naš biceps precivičiť. A teda, keď ho chceme precivičiť iba jedným pohybom, má zmysl odcivičiť viacer od cvíkov. Má, aj nemá, záleží od cvíku a konkrétne odivo silovej kriuky, vysvetlím. Člová kriuka cvíku znamená vlastne v ktorej časti pohybu, je daný cvík najťašší a naopak ktorej najľašší. Takže keď sa rozhodne svičiť biceps viacerimi cvíkmi, má to zmysel, ale iba v takom prípade, keď budú títo cvíky najnáročnejšie v rozdielnej časti pohybu. Keď sa rozhodne svičiť biceps iba jedným cvíkom, zvoľ taký cvík, ktorý má konstantnú silovu kriuku, teda je rovnako ťažký v každej časti pohybu. Ukážem príklad. Pokiaľ sa rozhodne svičiť biceps z dvoma cvíkmi, prvý cvík zvoľ taký, ktorý bude najnáročnejší v nakiahnútej časti pohybu, ako sú napríklad príče curls. A k tomu, pridaj nejaký cvík, ktorý bude najnáročnejší v skrátenej časti pohybu, ako sú napríklad klasické bicepsovec dvihy. Pokiaľ sa rozhodne svičiť biceps iba jedným cvíkom, zvoľ taký cvík, ktorý má konstantnú silovu kriuku, čo dosiahneš najideálnejšie nakladke alebo nakladkových strojoch. To môže být napríklad bicepsovec dvihy nakladke alebo príče curls na nakladkovom stroji.",
+          "score": 0.6396211704451779
+        },
+        {
+          "id": "out.json#1",
+          "file": "out.json",
+          "text": "osiahneš najideálnejšie nakladke alebo nakladkových strojoch. To môže být napríklad bicepsovec dvihy nakladke alebo príče curls na nakladkovom stroji. Pokiaľ sa ještě silo mocoho predsvičiť aj brachy o radiálisť, čo je táto guča tu napredlaktí, tak by som tam zaradiť ešte nejaký cvík nadmatom alebo kľadivovi zvík. Osobne to nepovažujem veľmi zapotrebné, pokiaľ ten brachy o radiálisť nemáš naozaj veľmi slabý, a to preto, pretože dostane veľmi intenzínu práco už predošli mi cvíkmi. Obydve varianty sú úplne v poriadku, ja som skôr fanušik, tá jedno cvíko je varianty, keďže som skôr za jednoduchosť a takte si chcem šetriť energiú pre iné svalovej partie.",
+          "score": 0.5764219931645252
+        },
+        {
+          "id": "out.json#2",
+          "file": "out.json",
+          "text": "e v poriadku, ja som skôr fanušik, tá jedno cvíko je varianty, keďže som skôr za jednoduchosť a takte si chcem šetriť energiú pre iné svalovej partie.",
+          "score": 0.39994159108606314
+        }
+      ],
+      "messages": {
+        "role": "user",
+        "content": "Ako cvičiť biceps?"
+      }
+    }
+  ],
+  "s-mjrpg8hw-a73c2b0b": [
+    {
+      "timestamp": "2025-12-29T22:03:29.580Z",
+      "query": "ako cvičiť bočné ramená?",
+      "chunks": [
+        {
+          "id": "out.json#1",
+          "file": "out.json",
+          "text": "osiahneš najideálnejšie nakladke alebo nakladkových strojoch. To môže být napríklad bicepsovec dvihy nakladke alebo príče curls na nakladkovom stroji. Pokiaľ sa ještě silo mocoho predsvičiť aj brachy o radiálisť, čo je táto guča tu napredlaktí, tak by som tam zaradiť ešte nejaký cvík nadmatom alebo kľadivovi zvík. Osobne to nepovažujem veľmi zapotrebné, pokiaľ ten brachy o radiálisť nemáš naozaj veľmi slabý, a to preto, pretože dostane veľmi intenzínu práco už predošli mi cvíkmi. Obydve varianty sú úplne v poriadku, ja som skôr fanušik, tá jedno cvíko je varianty, keďže som skôr za jednoduchosť a takte si chcem šetriť energiú pre iné svalovej partie.",
+          "score": 0.5683179982417069
+        },
+        {
+          "id": "out.json#0",
+          "file": "out.json",
+          "text": "Stačiť jeden cvíkl na bicepstrainingu, alebo ich treba robiť viac, a ktoré upresníme si to. Biceps ma iba jednu primarnú funkciu, če je flexia lakťa, če je pohyb, ktorý si videl v predložšom klípe a če je pohyb, ktorý chcene ideálne naš biceps precivičiť. A teda, keď ho chceme precivičiť iba jedným pohybom, má zmysl odcivičiť viacer od cvíkov. Má, aj nemá, záleží od cvíku a konkrétne odivo silovej kriuky, vysvetlím. Člová kriuka cvíku znamená vlastne v ktorej časti pohybu, je daný cvík najťašší a naopak ktorej najľašší. Takže keď sa rozhodne svičiť biceps viacerimi cvíkmi, má to zmysel, ale iba v takom prípade, keď budú títo cvíky najnáročnejšie v rozdielnej časti pohybu. Keď sa rozhodne svičiť biceps iba jedným cvíkom, zvoľ taký cvík, ktorý má konstantnú silovu kriuku, teda je rovnako ťažký v každej časti pohybu. Ukážem príklad. Pokiaľ sa rozhodne svičiť biceps z dvoma cvíkmi, prvý cvík zvoľ taký, ktorý bude najnáročnejší v nakiahnútej časti pohybu, ako sú napríklad príče curls. A k tomu, pridaj nejaký cvík, ktorý bude najnáročnejší v skrátenej časti pohybu, ako sú napríklad klasické bicepsovec dvihy. Pokiaľ sa rozhodne svičiť biceps iba jedným cvíkom, zvoľ taký cvík, ktorý má konstantnú silovu kriuku, čo dosiahneš najideálnejšie nakladke alebo nakladkových strojoch. To môže být napríklad bicepsovec dvihy nakladke alebo príče curls na nakladkovom stroji.",
+          "score": 0.49246801784733607
+        },
+        {
+          "id": "out.json#2",
+          "file": "out.json",
+          "text": "e v poriadku, ja som skôr fanušik, tá jedno cvíko je varianty, keďže som skôr za jednoduchosť a takte si chcem šetriť energiú pre iné svalovej partie.",
+          "score": 0.41318317085749684
+        }
+      ],
+      "messages": {
+        "role": "user",
+        "content": "ako cvičiť bočné ramená?"
+      }
+    }
+  ],
+  "s-mjrpgfr6-332d7d44": [
+    {
+      "timestamp": "2025-12-29T22:03:38.970Z",
+      "query": "ako cvičiť ramená?",
+      "chunks": [
+        {
+          "id": "out.json#1",
+          "file": "out.json",
+          "text": "osiahneš najideálnejšie nakladke alebo nakladkových strojoch. To môže být napríklad bicepsovec dvihy nakladke alebo príče curls na nakladkovom stroji. Pokiaľ sa ještě silo mocoho predsvičiť aj brachy o radiálisť, čo je táto guča tu napredlaktí, tak by som tam zaradiť ešte nejaký cvík nadmatom alebo kľadivovi zvík. Osobne to nepovažujem veľmi zapotrebné, pokiaľ ten brachy o radiálisť nemáš naozaj veľmi slabý, a to preto, pretože dostane veľmi intenzínu práco už predošli mi cvíkmi. Obydve varianty sú úplne v poriadku, ja som skôr fanušik, tá jedno cvíko je varianty, keďže som skôr za jednoduchosť a takte si chcem šetriť energiú pre iné svalovej partie.",
+          "score": 0.5717181109448064
+        },
+        {
+          "id": "out.json#0",
+          "file": "out.json",
+          "text": "Stačiť jeden cvíkl na bicepstrainingu, alebo ich treba robiť viac, a ktoré upresníme si to. Biceps ma iba jednu primarnú funkciu, če je flexia lakťa, če je pohyb, ktorý si videl v predložšom klípe a če je pohyb, ktorý chcene ideálne naš biceps precivičiť. A teda, keď ho chceme precivičiť iba jedným pohybom, má zmysl odcivičiť viacer od cvíkov. Má, aj nemá, záleží od cvíku a konkrétne odivo silovej kriuky, vysvetlím. Člová kriuka cvíku znamená vlastne v ktorej časti pohybu, je daný cvík najťašší a naopak ktorej najľašší. Takže keď sa rozhodne svičiť biceps viacerimi cvíkmi, má to zmysel, ale iba v takom prípade, keď budú títo cvíky najnáročnejšie v rozdielnej časti pohybu. Keď sa rozhodne svičiť biceps iba jedným cvíkom, zvoľ taký cvík, ktorý má konstantnú silovu kriuku, teda je rovnako ťažký v každej časti pohybu. Ukážem príklad. Pokiaľ sa rozhodne svičiť biceps z dvoma cvíkmi, prvý cvík zvoľ taký, ktorý bude najnáročnejší v nakiahnútej časti pohybu, ako sú napríklad príče curls. A k tomu, pridaj nejaký cvík, ktorý bude najnáročnejší v skrátenej časti pohybu, ako sú napríklad klasické bicepsovec dvihy. Pokiaľ sa rozhodne svičiť biceps iba jedným cvíkom, zvoľ taký cvík, ktorý má konstantnú silovu kriuku, čo dosiahneš najideálnejšie nakladke alebo nakladkových strojoch. To môže být napríklad bicepsovec dvihy nakladke alebo príče curls na nakladkovom stroji.",
+          "score": 0.5090290516696041
+        },
+        {
+          "id": "out.json#2",
+          "file": "out.json",
+          "text": "e v poriadku, ja som skôr fanušik, tá jedno cvíko je varianty, keďže som skôr za jednoduchosť a takte si chcem šetriť energiú pre iné svalovej partie.",
+          "score": 0.408150405070797
+        }
+      ],
+      "messages": {
+        "role": "user",
+        "content": "ako cvičiť ramená?"
+      }
+    }
+  ],
+  "s-mjrpgkbw-080c12df": [
+    {
+      "timestamp": "2025-12-29T22:03:45.855Z",
+      "query": "ako cvičiť prsia?",
+      "chunks": [
+        {
+          "id": "out.json#1",
+          "file": "out.json",
+          "text": "osiahneš najideálnejšie nakladke alebo nakladkových strojoch. To môže být napríklad bicepsovec dvihy nakladke alebo príče curls na nakladkovom stroji. Pokiaľ sa ještě silo mocoho predsvičiť aj brachy o radiálisť, čo je táto guča tu napredlaktí, tak by som tam zaradiť ešte nejaký cvík nadmatom alebo kľadivovi zvík. Osobne to nepovažujem veľmi zapotrebné, pokiaľ ten brachy o radiálisť nemáš naozaj veľmi slabý, a to preto, pretože dostane veľmi intenzínu práco už predošli mi cvíkmi. Obydve varianty sú úplne v poriadku, ja som skôr fanušik, tá jedno cvíko je varianty, keďže som skôr za jednoduchosť a takte si chcem šetriť energiú pre iné svalovej partie.",
+          "score": 0.5359999146136121
+        },
+        {
+          "id": "out.json#0",
+          "file": "out.json",
+          "text": "Stačiť jeden cvíkl na bicepstrainingu, alebo ich treba robiť viac, a ktoré upresníme si to. Biceps ma iba jednu primarnú funkciu, če je flexia lakťa, če je pohyb, ktorý si videl v predložšom klípe a če je pohyb, ktorý chcene ideálne naš biceps precivičiť. A teda, keď ho chceme precivičiť iba jedným pohybom, má zmysl odcivičiť viacer od cvíkov. Má, aj nemá, záleží od cvíku a konkrétne odivo silovej kriuky, vysvetlím. Člová kriuka cvíku znamená vlastne v ktorej časti pohybu, je daný cvík najťašší a naopak ktorej najľašší. Takže keď sa rozhodne svičiť biceps viacerimi cvíkmi, má to zmysel, ale iba v takom prípade, keď budú títo cvíky najnáročnejšie v rozdielnej časti pohybu. Keď sa rozhodne svičiť biceps iba jedným cvíkom, zvoľ taký cvík, ktorý má konstantnú silovu kriuku, teda je rovnako ťažký v každej časti pohybu. Ukážem príklad. Pokiaľ sa rozhodne svičiť biceps z dvoma cvíkmi, prvý cvík zvoľ taký, ktorý bude najnáročnejší v nakiahnútej časti pohybu, ako sú napríklad príče curls. A k tomu, pridaj nejaký cvík, ktorý bude najnáročnejší v skrátenej časti pohybu, ako sú napríklad klasické bicepsovec dvihy. Pokiaľ sa rozhodne svičiť biceps iba jedným cvíkom, zvoľ taký cvík, ktorý má konstantnú silovu kriuku, čo dosiahneš najideálnejšie nakladke alebo nakladkových strojoch. To môže být napríklad bicepsovec dvihy nakladke alebo príče curls na nakladkovom stroji.",
+          "score": 0.5039712760121885
+        },
+        {
+          "id": "out.json#2",
+          "file": "out.json",
+          "text": "e v poriadku, ja som skôr fanušik, tá jedno cvíko je varianty, keďže som skôr za jednoduchosť a takte si chcem šetriť energiú pre iné svalovej partie.",
+          "score": 0.4685670799678109
+        }
+      ],
+      "messages": {
+        "role": "user",
+        "content": "ako cvičiť prsia?"
+      }
+    }
+  ],
+  "s-mjrpgpuq-9a889a68": [
+    {
+      "timestamp": "2025-12-29T22:03:52.902Z",
+      "query": "aky je najlepší split?",
+      "chunks": [
+        {
+          "id": "out.json#2",
+          "file": "out.json",
+          "text": "e v poriadku, ja som skôr fanušik, tá jedno cvíko je varianty, keďže som skôr za jednoduchosť a takte si chcem šetriť energiú pre iné svalovej partie.",
+          "score": 0.404981482371604
+        },
+        {
+          "id": "out.json#0",
+          "file": "out.json",
+          "text": "Stačiť jeden cvíkl na bicepstrainingu, alebo ich treba robiť viac, a ktoré upresníme si to. Biceps ma iba jednu primarnú funkciu, če je flexia lakťa, če je pohyb, ktorý si videl v predložšom klípe a če je pohyb, ktorý chcene ideálne naš biceps precivičiť. A teda, keď ho chceme precivičiť iba jedným pohybom, má zmysl odcivičiť viacer od cvíkov. Má, aj nemá, záleží od cvíku a konkrétne odivo silovej kriuky, vysvetlím. Člová kriuka cvíku znamená vlastne v ktorej časti pohybu, je daný cvík najťašší a naopak ktorej najľašší. Takže keď sa rozhodne svičiť biceps viacerimi cvíkmi, má to zmysel, ale iba v takom prípade, keď budú títo cvíky najnáročnejšie v rozdielnej časti pohybu. Keď sa rozhodne svičiť biceps iba jedným cvíkom, zvoľ taký cvík, ktorý má konstantnú silovu kriuku, teda je rovnako ťažký v každej časti pohybu. Ukážem príklad. Pokiaľ sa rozhodne svičiť biceps z dvoma cvíkmi, prvý cvík zvoľ taký, ktorý bude najnáročnejší v nakiahnútej časti pohybu, ako sú napríklad príče curls. A k tomu, pridaj nejaký cvík, ktorý bude najnáročnejší v skrátenej časti pohybu, ako sú napríklad klasické bicepsovec dvihy. Pokiaľ sa rozhodne svičiť biceps iba jedným cvíkom, zvoľ taký cvík, ktorý má konstantnú silovu kriuku, čo dosiahneš najideálnejšie nakladke alebo nakladkových strojoch. To môže být napríklad bicepsovec dvihy nakladke alebo príče curls na nakladkovom stroji.",
+          "score": 0.36680444141426877
+        },
+        {
+          "id": "out.json#1",
+          "file": "out.json",
+          "text": "osiahneš najideálnejšie nakladke alebo nakladkových strojoch. To môže být napríklad bicepsovec dvihy nakladke alebo príče curls na nakladkovom stroji. Pokiaľ sa ještě silo mocoho predsvičiť aj brachy o radiálisť, čo je táto guča tu napredlaktí, tak by som tam zaradiť ešte nejaký cvík nadmatom alebo kľadivovi zvík. Osobne to nepovažujem veľmi zapotrebné, pokiaľ ten brachy o radiálisť nemáš naozaj veľmi slabý, a to preto, pretože dostane veľmi intenzínu práco už predošli mi cvíkmi. Obydve varianty sú úplne v poriadku, ja som skôr fanušik, tá jedno cvíko je varianty, keďže som skôr za jednoduchosť a takte si chcem šetriť energiú pre iné svalovej partie.",
+          "score": 0.36208350181674603
+        }
+      ],
+      "messages": {
+        "role": "user",
+        "content": "aky je najlepší split?"
+      }
+    }
+  ],
+  "s-mjrpjfez-b71c1b0b": [
+    {
+      "timestamp": "2025-12-29T22:05:58.509Z",
+      "query": "aký je najlepší cvik na bočné ramená?",
+      "chunks": [
+        {
+          "id": "DSciTblgLEt.txt#0",
+          "file": "DSciTblgLEt.txt",
+          "text": "A ký je ten najlepší cvýk na bočnej rámená podľa Jeffa Niparda? What are the best and worst side Delt exercises. Standing dumbbell lateral raise. I don't love that you guys zero tension in a stretch. I'll go... Úpášky z jednú ruďka mi bol. Ty pretože sa ti nie páči, že tam je nulove napitev na těhnú tej pozicí. Jeff, Jeff, Jeff. Háno, je to pravda, že v tejto spodnej pozicí nie ježiadné napitev a túto úplneho reprity 90° je maximálne napitev. Pretože gravitácia, hej to ne treba vysvetlovať. Je to ale v prípade rámien problém? Vôbec nie, prečo? Tak za prve rámená nebenefitujú z natihnutia z prostredkované hipertrofi. Takých svaloch to je potrebné, aby bolo napäťi aj v tej natihnutie pozicí. Pri tých svaloch to rebenefitujú z natihnutia z prostredkované hipertrofi. Takže to, že je napäťi iba vo vrchné pozicí a na spodné pozicí nie je žaden napäťi, nie je žaden problém. Za druhé rámená ni tak veľmi nevieš natihnuti. O tejto pozicí, ktoré movadí, že nie je napäťi, nie je natihnuta pozicia. Toto je anatomická pozicia rámien. Myslíte si, že keď maš rámená v tejto pozicí, tak ich maš natihnuté, sú pod pasívnym napäťím? Ja si to nemyslím. Jediné negatívum, ktoré ja vnímám pri upažovaní s jednorúčkami je, ako sme uyspominuli, na spodku je minimálne napäťi, alebo žiadne a na brchu je maximálne napäťi.",
+          "score": 0.6131723759289917
+        },
+        {
+          "id": "DSpIcongPMd.txt#1",
+          "file": "DSpIcongPMd.txt",
+          "text": "cvičiš posediačky, takže to je perfektne stabilné cvík, aby to nebolo málo, no reálne si neviem predstaví lepší cvík na brachyho radiális ako je toto. Čože pokiaľ sú predlakťa svalova partia, ktorú by si chcel zlepšiť toto jej cvík, ktorý by som určiti to svojho treningu by o plámu záradil a pre viac je to došený hľadnáko optimálizáť svojí treningy.",
+          "score": 0.5920626029872655
+        },
+        {
+          "id": "DSpIcongPMd.txt#0",
+          "file": "DSpIcongPMd.txt",
+          "text": "Narazul som na extrémne dobrý cívina tohoj predlakťa. To zeraj. A tým myslím konkrétne tento sval tu pod názvom brachyho radiális čo je reálne najväčší sval na tohoj predlakťa. Prečo je toto výbornie cívina toho predlakťa? Zaprvé, pretože brachyho radiális ma najlepšiu aktiváciu keď maš zohnuté lakte, zruba pri tých 90° fleksie lakte. Čím viac maš lakteť vystretí, tým viac prebrá prácu bicers. Čo mu sa v takomto prípade chceme vyhnúť. No zládom k tomuto výbornému setupu, kedy to roviš posediačky, Ča nohy ani nepustia do väčšieho vystretia lakťou a počas celého tohto rosaho pohybu ma najväčšiu aktiváciu práve brachyho radiális. Klučovou podmienkoť cvične na toto cviku je cvične to nad matom, ako to cvičí túto pan, kedy najviac vyhodníš práve brachyho radiális. Moja menšia rada ako tento cvík ešte vylepšiť použi trháčky. Na to najmä pokeľ sa chceš zaceliť primárne iba na brachyho radiális a ní je aj na ostatné svali predlakťa. Na koľkoť a pri takomto uchopie nad matom určite bude limitováť sila tvojho uchopu začo sa zodpovedne iné svali predlakťa. No pokeľ sa ješ ozvičiť predlakťa ako celok, tak klučne to cvič aj bestráčiek. Ešte k tomu tento cvičiš posediačky, takže to je perfektne stabilné cvík, aby to nebolo málo, no reálne si neviem predstaví lepší cvík na brachyho radiális ako je toto.",
+          "score": 0.5841046639338643
+        },
+        {
+          "id": "DSXL87aABv8.txt#1",
+          "file": "DSXL87aABv8.txt",
+          "text": ", ako každe iné, dajú sa priamo cvičiť a takéto priame cviče nebude obnoho efektívnejšie a kemy sa ich snaží odvíčiť tým, že nebuješ trháčky používať. Uplne ti na to stača dva cvíky, na vnútornostran predlaktí nejaká forma, flexie, zápesti ako vidíš, tu je jedno ako formou a na brachy o radiális, čo je ta najväčšia guča na tých predlaktiach, takéto z dvihi nad matom alebo hammer curls tak tiež nezaleží ako formou, či už nakládke z jednú ručkami alebo ako. Pokiaľ maš la dobre predlaktie na predlaktia, ako mám je tak tieto cvíky, ani veľmi nepotrebuje sviči tak, ako tieto sváli sú veľmi intenzívne zapojené pri klasických bicepsových zlyhoch alebo nejakých iných bicepsových cviko, ktoré som si istý, že určite už cvičiš. Takže sa snažiť cviči s rozumom, Čo môžeš mať o mnoho lepšie vysledky a pre viac je do dušených rád ako optymázovať svojí treningy. Hoď poľo.",
+          "score": 0.5345097582399231
+        },
+        {
+          "id": "DSXL87aABv8.txt#0",
+          "file": "DSXL87aABv8.txt",
+          "text": "Ak budeš tvíčiť s trháčkami, budeš mať malé predlaktie. Toto typový iba niekdo kdo vy očičení asi toľko ako ja o štrikovanie. To, že sú trháčky absoluto nutnosťou pri cvíkoch ako sú ar-dielka, zťahovanie klatky pritahy, o tom sa ani bavidne musím. Voj úchopti zliha o mnogo rýchlejšie ako cielove svali na týchto cvíkoch a teraz tých cvíkov nevýťažiš ani z ďaléka maximu. A argument je typu, že ty nepovževaš trháčky lebo si chlap ja návrhujem záhodiť svoje ego, začaj je rozmýšľať, začať svičiť s rozumom a teda je efektívnejšie, ďaká čemu budeš mať lepšie vysledky, ďaká čemu budeš je väčšich klat. Válek predlaktiam, ja používam trháčky na každom, tiahovam cvíku už minimálne 5 rokov a predlaktia považujem za jednu z mojich najsonnejších partí. Ale áno, to, že mám ja dobré predlaktia, neznamená automácik, že budeš aj tých, každý máme predispozícije na iné veci. Ako sa ale dámať navite predlaktia, keď použímaš trháčky? No tak, že sváli predlaktia sú rovnaké, ako každe iné, dajú sa priamo cvičiť a takéto priame cviče nebude obnoho efektívnejšie a kemy sa ich snaží odvíčiť tým, že nebuješ trháčky používať.",
+          "score": 0.5157834753944064
+        }
+      ],
+      "messages": {
+        "role": "user",
+        "content": "aký je najlepší cvik na bočné ramená?"
+      }
+    }
+  ],
+  "s-mjrpltbt-d3acad08": [
+    {
+      "timestamp": "2025-12-29T22:07:49.894Z",
+      "query": "aké sú najlepšie cviky na zadok?",
+      "chunks": [
+        {
+          "id": "DSpIcongPMd.txt#1",
+          "file": "DSpIcongPMd.txt",
+          "text": "cvičiš posediačky, takže to je perfektne stabilné cvík, aby to nebolo málo, no reálne si neviem predstaví lepší cvík na brachyho radiális ako je toto. Čože pokiaľ sú predlakťa svalova partia, ktorú by si chcel zlepšiť toto jej cvík, ktorý by som určiti to svojho treningu by o plámu záradil a pre viac je to došený hľadnáko optimálizáť svojí treningy.",
+          "score": 0.5201095020882412
+        },
+        {
+          "id": "DSCxELpAOv2.txt#2",
+          "file": "DSCxELpAOv2.txt",
+          "text": "zaníba jednu sériu 2x do tiežňa po nejakých 5 až 8 až 7 opakovanie dopom to nejakými zmyslu plnými cvíky mi pozorala neprežento a uvidíš, čo sa stane.",
+          "score": 0.5034341379434636
+        },
+        {
+          "id": "DSXL87aABv8.txt#1",
+          "file": "DSXL87aABv8.txt",
+          "text": ", ako každe iné, dajú sa priamo cvičiť a takéto priame cviče nebude obnoho efektívnejšie a kemy sa ich snaží odvíčiť tým, že nebuješ trháčky používať. Uplne ti na to stača dva cvíky, na vnútornostran predlaktí nejaká forma, flexie, zápesti ako vidíš, tu je jedno ako formou a na brachy o radiális, čo je ta najväčšia guča na tých predlaktiach, takéto z dvihi nad matom alebo hammer curls tak tiež nezaleží ako formou, či už nakládke z jednú ručkami alebo ako. Pokiaľ maš la dobre predlaktie na predlaktia, ako mám je tak tieto cvíky, ani veľmi nepotrebuje sviči tak, ako tieto sváli sú veľmi intenzívne zapojené pri klasických bicepsových zlyhoch alebo nejakých iných bicepsových cviko, ktoré som si istý, že určite už cvičiš. Takže sa snažiť cviči s rozumom, Čo môžeš mať o mnoho lepšie vysledky a pre viac je do dušených rád ako optymázovať svojí treningy. Hoď poľo.",
+          "score": 0.48635268022916817
+        },
+        {
+          "id": "DSpIcongPMd.txt#0",
+          "file": "DSpIcongPMd.txt",
+          "text": "Narazul som na extrémne dobrý cívina tohoj predlakťa. To zeraj. A tým myslím konkrétne tento sval tu pod názvom brachyho radiális čo je reálne najväčší sval na tohoj predlakťa. Prečo je toto výbornie cívina toho predlakťa? Zaprvé, pretože brachyho radiális ma najlepšiu aktiváciu keď maš zohnuté lakte, zruba pri tých 90° fleksie lakte. Čím viac maš lakteť vystretí, tým viac prebrá prácu bicers. Čo mu sa v takomto prípade chceme vyhnúť. No zládom k tomuto výbornému setupu, kedy to roviš posediačky, Ča nohy ani nepustia do väčšieho vystretia lakťou a počas celého tohto rosaho pohybu ma najväčšiu aktiváciu práve brachyho radiális. Klučovou podmienkoť cvične na toto cviku je cvične to nad matom, ako to cvičí túto pan, kedy najviac vyhodníš práve brachyho radiális. Moja menšia rada ako tento cvík ešte vylepšiť použi trháčky. Na to najmä pokeľ sa chceš zaceliť primárne iba na brachyho radiális a ní je aj na ostatné svali predlakťa. Na koľkoť a pri takomto uchopie nad matom určite bude limitováť sila tvojho uchopu začo sa zodpovedne iné svali predlakťa. No pokeľ sa ješ ozvičiť predlakťa ako celok, tak klučne to cvič aj bestráčiek. Ešte k tomu tento cvičiš posediačky, takže to je perfektne stabilné cvík, aby to nebolo málo, no reálne si neviem predstaví lepší cvík na brachyho radiális ako je toto.",
+          "score": 0.4817899467675398
+        },
+        {
+          "id": "DSciTblgLEt.txt#0",
+          "file": "DSciTblgLEt.txt",
+          "text": "A ký je ten najlepší cvýk na bočnej rámená podľa Jeffa Niparda? What are the best and worst side Delt exercises. Standing dumbbell lateral raise. I don't love that you guys zero tension in a stretch. I'll go... Úpášky z jednú ruďka mi bol. Ty pretože sa ti nie páči, že tam je nulove napitev na těhnú tej pozicí. Jeff, Jeff, Jeff. Háno, je to pravda, že v tejto spodnej pozicí nie ježiadné napitev a túto úplneho reprity 90° je maximálne napitev. Pretože gravitácia, hej to ne treba vysvetlovať. Je to ale v prípade rámien problém? Vôbec nie, prečo? Tak za prve rámená nebenefitujú z natihnutia z prostredkované hipertrofi. Takých svaloch to je potrebné, aby bolo napäťi aj v tej natihnutie pozicí. Pri tých svaloch to rebenefitujú z natihnutia z prostredkované hipertrofi. Takže to, že je napäťi iba vo vrchné pozicí a na spodné pozicí nie je žaden napäťi, nie je žaden problém. Za druhé rámená ni tak veľmi nevieš natihnuti. O tejto pozicí, ktoré movadí, že nie je napäťi, nie je natihnuta pozicia. Toto je anatomická pozicia rámien. Myslíte si, že keď maš rámená v tejto pozicí, tak ich maš natihnuté, sú pod pasívnym napäťím? Ja si to nemyslím. Jediné negatívum, ktoré ja vnímám pri upažovaní s jednorúčkami je, ako sme uyspominuli, na spodku je minimálne napäťi, alebo žiadne a na brchu je maximálne napäťi.",
+          "score": 0.46892618977150513
+        }
+      ],
+      "messages": {
+        "role": "user",
+        "content": "aké sú najlepšie cviky na zadok?"
+      }
+    }
+  ],
+  "s-mjrpmn91-00d1575a": [
+    {
+      "timestamp": "2025-12-29T22:08:28.615Z",
+      "query": "aké sú najlepšie cviky na triceps?",
+      "chunks": [
+        {
+          "id": "DSXL87aABv8.txt#1",
+          "file": "DSXL87aABv8.txt",
+          "text": ", ako každe iné, dajú sa priamo cvičiť a takéto priame cviče nebude obnoho efektívnejšie a kemy sa ich snaží odvíčiť tým, že nebuješ trháčky používať. Uplne ti na to stača dva cvíky, na vnútornostran predlaktí nejaká forma, flexie, zápesti ako vidíš, tu je jedno ako formou a na brachy o radiális, čo je ta najväčšia guča na tých predlaktiach, takéto z dvihi nad matom alebo hammer curls tak tiež nezaleží ako formou, či už nakládke z jednú ručkami alebo ako. Pokiaľ maš la dobre predlaktie na predlaktia, ako mám je tak tieto cvíky, ani veľmi nepotrebuje sviči tak, ako tieto sváli sú veľmi intenzívne zapojené pri klasických bicepsových zlyhoch alebo nejakých iných bicepsových cviko, ktoré som si istý, že určite už cvičiš. Takže sa snažiť cviči s rozumom, Čo môžeš mať o mnoho lepšie vysledky a pre viac je do dušených rád ako optymázovať svojí treningy. Hoď poľo.",
+          "score": 0.6047595889775341
+        },
+        {
+          "id": "DSpIcongPMd.txt#0",
+          "file": "DSpIcongPMd.txt",
+          "text": "Narazul som na extrémne dobrý cívina tohoj predlakťa. To zeraj. A tým myslím konkrétne tento sval tu pod názvom brachyho radiális čo je reálne najväčší sval na tohoj predlakťa. Prečo je toto výbornie cívina toho predlakťa? Zaprvé, pretože brachyho radiális ma najlepšiu aktiváciu keď maš zohnuté lakte, zruba pri tých 90° fleksie lakte. Čím viac maš lakteť vystretí, tým viac prebrá prácu bicers. Čo mu sa v takomto prípade chceme vyhnúť. No zládom k tomuto výbornému setupu, kedy to roviš posediačky, Ča nohy ani nepustia do väčšieho vystretia lakťou a počas celého tohto rosaho pohybu ma najväčšiu aktiváciu práve brachyho radiális. Klučovou podmienkoť cvične na toto cviku je cvične to nad matom, ako to cvičí túto pan, kedy najviac vyhodníš práve brachyho radiális. Moja menšia rada ako tento cvík ešte vylepšiť použi trháčky. Na to najmä pokeľ sa chceš zaceliť primárne iba na brachyho radiális a ní je aj na ostatné svali predlakťa. Na koľkoť a pri takomto uchopie nad matom určite bude limitováť sila tvojho uchopu začo sa zodpovedne iné svali predlakťa. No pokeľ sa ješ ozvičiť predlakťa ako celok, tak klučne to cvič aj bestráčiek. Ešte k tomu tento cvičiš posediačky, takže to je perfektne stabilné cvík, aby to nebolo málo, no reálne si neviem predstaví lepší cvík na brachyho radiális ako je toto.",
+          "score": 0.5681622860524473
+        },
+        {
+          "id": "DSpIcongPMd.txt#1",
+          "file": "DSpIcongPMd.txt",
+          "text": "cvičiš posediačky, takže to je perfektne stabilné cvík, aby to nebolo málo, no reálne si neviem predstaví lepší cvík na brachyho radiális ako je toto. Čože pokiaľ sú predlakťa svalova partia, ktorú by si chcel zlepšiť toto jej cvík, ktorý by som určiti to svojho treningu by o plámu záradil a pre viac je to došený hľadnáko optimálizáť svojí treningy.",
+          "score": 0.5568761577039918
+        },
+        {
+          "id": "DSXL87aABv8.txt#0",
+          "file": "DSXL87aABv8.txt",
+          "text": "Ak budeš tvíčiť s trháčkami, budeš mať malé predlaktie. Toto typový iba niekdo kdo vy očičení asi toľko ako ja o štrikovanie. To, že sú trháčky absoluto nutnosťou pri cvíkoch ako sú ar-dielka, zťahovanie klatky pritahy, o tom sa ani bavidne musím. Voj úchopti zliha o mnogo rýchlejšie ako cielove svali na týchto cvíkoch a teraz tých cvíkov nevýťažiš ani z ďaléka maximu. A argument je typu, že ty nepovževaš trháčky lebo si chlap ja návrhujem záhodiť svoje ego, začaj je rozmýšľať, začať svičiť s rozumom a teda je efektívnejšie, ďaká čemu budeš mať lepšie vysledky, ďaká čemu budeš je väčšich klat. Válek predlaktiam, ja používam trháčky na každom, tiahovam cvíku už minimálne 5 rokov a predlaktia považujem za jednu z mojich najsonnejších partí. Ale áno, to, že mám ja dobré predlaktia, neznamená automácik, že budeš aj tých, každý máme predispozícije na iné veci. Ako sa ale dámať navite predlaktia, keď použímaš trháčky? No tak, že sváli predlaktia sú rovnaké, ako každe iné, dajú sa priamo cvičiť a takéto priame cviče nebude obnoho efektívnejšie a kemy sa ich snaží odvíčiť tým, že nebuješ trháčky používať.",
+          "score": 0.5452502697591768
+        },
+        {
+          "id": "DSciTblgLEt.txt#0",
+          "file": "DSciTblgLEt.txt",
+          "text": "A ký je ten najlepší cvýk na bočnej rámená podľa Jeffa Niparda? What are the best and worst side Delt exercises. Standing dumbbell lateral raise. I don't love that you guys zero tension in a stretch. I'll go... Úpášky z jednú ruďka mi bol. Ty pretože sa ti nie páči, že tam je nulove napitev na těhnú tej pozicí. Jeff, Jeff, Jeff. Háno, je to pravda, že v tejto spodnej pozicí nie ježiadné napitev a túto úplneho reprity 90° je maximálne napitev. Pretože gravitácia, hej to ne treba vysvetlovať. Je to ale v prípade rámien problém? Vôbec nie, prečo? Tak za prve rámená nebenefitujú z natihnutia z prostredkované hipertrofi. Takých svaloch to je potrebné, aby bolo napäťi aj v tej natihnutie pozicí. Pri tých svaloch to rebenefitujú z natihnutia z prostredkované hipertrofi. Takže to, že je napäťi iba vo vrchné pozicí a na spodné pozicí nie je žaden napäťi, nie je žaden problém. Za druhé rámená ni tak veľmi nevieš natihnuti. O tejto pozicí, ktoré movadí, že nie je napäťi, nie je natihnuta pozicia. Toto je anatomická pozicia rámien. Myslíte si, že keď maš rámená v tejto pozicí, tak ich maš natihnuté, sú pod pasívnym napäťím? Ja si to nemyslím. Jediné negatívum, ktoré ja vnímám pri upažovaní s jednorúčkami je, ako sme uyspominuli, na spodku je minimálne napäťi, alebo žiadne a na brchu je maximálne napäťi.",
+          "score": 0.5099203918156598
+        }
+      ],
+      "messages": {
+        "role": "user",
+        "content": "aké sú najlepšie cviky na triceps?"
+      }
+    }
   ]
 }

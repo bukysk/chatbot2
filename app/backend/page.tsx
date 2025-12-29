@@ -177,11 +177,9 @@ export default function BackendToolsPage() {
       <p style={{ marginBottom: 12 }}>Use the sidebar to navigate backend sections.</p>
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
         <Link href="/backend/sessions"><div className="card p-4">Sessions</div></Link>
-        <Link href="/backend/retrieval"><div className="card p-4">Retrieval</div></Link>
         <Link href="/backend/runtime"><div className="card p-4">Runtime</div></Link>
-        <Link href="/backend/pdfs"><div className="card p-4">PDFs</div></Link>
-        <Link href="/backend/indexing"><div className="card p-4">Indexing</div></Link>
-        <Link href="/backend/instagram"><div className="card p-4">Instagram URLs</div></Link>
+        <Link href="/backend/database"><div className="card p-4">Database</div></Link>
+        <Link href="/backend/gym"><div className="card p-4">Gym watcher</div></Link>
       </div>
       <div style={{ marginTop: 20 }}>
         <a href="/" className="text-sm text-blue-600 underline">Back to front page</a>
