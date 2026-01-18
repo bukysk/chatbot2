@@ -106,27 +106,13 @@ export async function runIndexer(opts?: { pdfDir?: string; outFile?: string; bat
       : readTextFromFile(full, ext);
     const chunks = splitIntoChunks(text || '');
     // batch embeddings
-    const fileChunkRecords: ChunkRecord[] = [];
     for (let i = 0; i < chunks.length; i += BATCH_SIZE) {
       const batch = chunks.slice(i, i + BATCH_SIZE);
       const embeddingsResp = await client.embeddings.create({ model: EMBEDDING_MODEL, input: batch });
       embeddingsResp.data.forEach((emb, j) => {
         const rec: ChunkRecord = { id: `${file}#${i + j}`, file, text: batch[j], embedding: emb.embedding };
         allChunks.push(rec);
-        fileChunkRecords.push(rec);
       });
-    }
-
-    if (fileChunkRecords.length > 0) {
-      const dim = fileChunkRecords[0].embedding.length;
-      const sum = new Array<number>(dim).fill(0);
-      for (const c of fileChunkRecords) {
-        for (let k = 0; k < dim; k++) sum[k] += c.embedding[k];
-      }
-      const avg = sum.map(v => v / fileChunkRecords.length);
-      const subjectText = `SUBJECT-LEVEL: ${file} (centroid of ${fileChunkRecords.length} chunks)`;
-      const subjectRec: ChunkRecord = { id: `${file}#subject`, file, text: subjectText, embedding: avg };
-      allChunks.push(subjectRec);
     }
   }
 

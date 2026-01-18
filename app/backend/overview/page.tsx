@@ -14,6 +14,7 @@ export default function OverviewPage() {
         <Link href="/backend/runtime"><div className="card p-4">Runtime</div></Link>
         <Link href="/backend/pdfs"><div className="card p-4">PDFs</div></Link>
         <Link href="/backend/indexing"><div className="card p-4">Indexing</div></Link>
+        <Link href="/backend/instagram"><div className="card p-4">Instagram Scraper</div></Link>
       </div>
     </div>
   );
